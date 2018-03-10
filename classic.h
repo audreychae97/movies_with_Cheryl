@@ -11,28 +11,20 @@
 
 class Classic: public Movie {
 private:
-    string actor;
+    std::string actor;
     int month;
 
 public:
     Classic();
-    ~Classic();
+    virtual ~Classic();
 
-    //setters
-    void setTitle(string);
-    void setDirector(string);
-    void setYear(int year);
-    void setActor(string);
+    // Setters
+    void setActor(std::string);
     void setMonth(int month);
 
-    //getters
-    string getTitle() const;
-    string getDirector() const;
-    int getYear() const;
-    string getActor() const;
+    // Getters
+    std::string getActor() const;
     int getMonth() const;
-
-
 };
 
 #endif
