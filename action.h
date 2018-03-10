@@ -5,7 +5,7 @@
 #include "store.h"
 
 class Action {
-private:
+protected:
     Store* store;
 
 public:
