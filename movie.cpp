@@ -2,8 +2,8 @@
 #include "movie.h"
 
 //-------------------------Default Constructor---------------------------------
-// TODO WORK ON THIS
-Movie::Movie() {
+// TODO
+Movie::Movie(char genre) {
 
 }
 

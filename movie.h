@@ -16,7 +16,7 @@ private:
 	int year;
 
 public:
-	Movie();
+	Movie(char genre);
 	virtual ~Movie();
 
 	// setters
