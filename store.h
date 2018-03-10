@@ -15,7 +15,7 @@ class Store {
   private:
       int hashSize;
       HashTable<Customer *> customerList;
-      HashTable<Movie *> moveList;
+      vector< vector<Movie> > MovieList;
       std::map<std::string, int> movieStock;   // key = title, int = stock
 
   public:
