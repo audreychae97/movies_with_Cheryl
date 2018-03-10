@@ -1,8 +1,8 @@
-#include<string>
-using namespace std;
-
 #ifndef MOVIE_H_
 #define MOVIE_H_
+
+#include <string>
+#include "movie.h"
 
 //---------------------------------------------------------------------------
 // Base Class Movies, stores the information about each individual movie.
@@ -11,8 +11,8 @@ using namespace std;
 
 class Movie {
 private:
-	string title;
-	string director;
+	std::string title;
+	std::string director;
 	int year;
 
 public:
@@ -20,16 +20,15 @@ public:
 	virtual ~Movie();
 
 	// setters
-	virtual void setTitle(string) = 0;
-	virtual void setDirector(string) = 0;
-	virtual void setYear(int year) = 0;
+	void setTitle(std::string title);
+	void setDirector(std::string director);
+	void setYear(int year);
 
 	//getters
-	virtual string getTitle() const = 0;
-	virtual string getDirector() const = 0;
-	virtual int getYear() const = 0;
+	std::string getTitle() const { return title; };
+	std::string getDirector() const { return director; };
+	int getYear() const { return year; };
 
 };
-
 
 #endif /* MOVIE_H_ */
