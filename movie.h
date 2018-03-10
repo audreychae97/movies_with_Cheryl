@@ -10,13 +10,13 @@
 //---------------------------------------------------------------------------
 
 class Movie {
-private:
+protected:
 	std::string title;
 	std::string director;
 	int year;
 
 public:
-	Movie(char genre);
+	Movie();
 	virtual ~Movie();
 
 	// setters

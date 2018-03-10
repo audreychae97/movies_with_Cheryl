@@ -3,7 +3,7 @@
 
 //-------------------------Default Constructor---------------------------------
 // TODO
-Movie::Movie(char genre) {
+Movie::Movie() {
 
 }
 

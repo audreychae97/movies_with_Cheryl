@@ -1,9 +1,8 @@
-#include<string>
-using namespace std;
-#include "movie.h";
-
 #ifndef CLASSIC_H_
 #define CLASSIC_H_
+
+#include <string>
+#include "movie.h"
 
 //---------------------------------------------------------------------------
 //Class Classic, stores the information about each individual classic movie.
@@ -36,6 +35,4 @@ public:
 
 };
 
-
-
-#endif /* CLASSIC_H_ */
+#endif
