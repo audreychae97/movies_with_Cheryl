@@ -23,8 +23,8 @@ public:
     void setMonth(int month);
 
     // Getters
-    std::string getActor() const;
-    int getMonth() const;
+    std::string getActor() const { return actor; };
+    int getMonth() const { return month; };
 };
 
 #endif
