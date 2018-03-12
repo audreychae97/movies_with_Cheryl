@@ -1,39 +1,15 @@
 #include "store.h"
+#include "customer.h"
 #include <fstream>
 #include <iostream>
 #include <sstream>
 using namespace std;
 
-
-
 Store::Store(std::string fileName){
-    hashSize = findHashSize(fileName);
 }
-//Store::~Store(){
-//
-//}
-//------------------------------------------------------------------------------
-//  findHashSize() -returns the hash size
-//                  1) count the amount of customers in customer.txt
-//                  2) step (1) multiplied by 2
-//                  3) find nearest prime number
-//------------------------------------------------------------------------------
-int Store::findHashSize(string fileName){
-    ifstream inFile;
-    inFile.open(fileName);
-    int custCount = 0;
-    std::string line;
-
-    if(!inFile){
-        std::cout << "Could not open file: " + fileName << endl;
-    }
-    else{
-        while (std::getline(inFile, line))
-            ++custCount;
-    }
-
-    return getPrimeNumber(custCount * 2);
+Store::~Store(){
 }
+
 //------------------------------------------------------------------------------
 //  loadCustList() -reads in a text file containing customer data
 //                  1) parse the line to see first word in line (custID)
@@ -42,30 +18,26 @@ int Store::findHashSize(string fileName){
 //                  4) push customer object into hash table
 //------------------------------------------------------------------------------
 void Store::loadCustList(std::string custDataFile){
-    std::string token;
     string customerLine;
 
     ifstream inFile;
     inFile.open(custDataFile);
 
-
     if(!inFile){
         std::cout << "Could not open file: " + custDataFile << endl;
     }
     else{
-        getline (inFile, customerLine);
-        std::istringstream ss(customerLine);
-        while(std::getline(ss, token, ',')) {   //for each line = 1 movie
-            std::cout << token << '\n';
-            //Movie * m = MovieFactory.createMovie(token);
-            //m.stock = next token
-            //m.director = next token
-            //m.title = next token
-            //m.releaseYear = next token
+        while(!inFile.eof()){
+            getline (inFile, customerLine);
+            customerList.put(customerLine);
         }
         inFile.close();
     }
 
+}
+void Store::showCustomers(){
+    cout << "THE CUSTOMER TABLE:" << endl;
+    customerList.displayTable();
 }
 //------------------------------------------------------------------------------
 //  loadMovieList() -reads in a text file containing movie data
@@ -75,31 +47,32 @@ void Store::loadCustList(std::string custDataFile){
 //                  3) set all properties of the movie by parsing the rest
 //                  4) Push the movie to the movie* hashtable
 //------------------------------------------------------------------------------
-void Store::loadMovieList(std::string movieDataFile){
-    std::string token;
-    string movieLine;
-
-    ifstream inFile;
-    inFile.open(movieDataFile);
-
-
-    if(!inFile){
-        std::cout << "Could not open file: " + movieDataFile << endl;
-    }
-    else{
-        getline (inFile, movieLine);
-        std::istringstream ss(movieLine);
-        while(std::getline(ss, token, ',')) {   //for each line = 1 movie
-            std::cout << token << '\n';
-            //Movie * m = MovieFactory.createMovie(token);
-            //m.stock = next token
-            //m.director = next token
-            //m.title = next token
-            //m.releaseYear = next token
-        }
-        inFile.close();
-    }
-}
+//void Store::loadMovieList(std::string movieDataFile){
+//    std::string token;
+//    string movieLine;
+//
+//    ifstream inFile;
+//    inFile.open(movieDataFile);
+//
+//
+//    if(!inFile){
+//        std::cout << "Could not open file: " + movieDataFile << endl;
+//    }
+//    else{
+//        getline (inFile, movieLine);
+//        std::istringstream ss(movieLine);
+//        while(std::getline(ss, token, ',')) {   //for each line = 1 movie
+//            std::cout << token << '\n';
+//            //Movie * m = MovieFactory.createMovie(token);
+//            //m.stock = next token
+//            //m.director = next token
+//            //m.title = next token
+//            //m.releaseYear = next token
+//
+//        }
+//        inFile.close();
+//    }
+//}
 //------------------------------------------------------------------------------
         //while(getLine()){
         //  getLine() - read in first line of input
@@ -134,40 +107,3 @@ void Store::loadMovieList(std::string movieDataFile){
         //sort movies by Release Date, then Major Actor
         //}
 //}
-
-//------------------------------------------------------------------------------
-//  getHashSize()- returns the hash size
-//------------------------------------------------------------------------------
-int Store::getHashSize(){
-    cout << "Cust Size: " << hashSize << endl;
-    return hashSize;
-}
-//------------------------------------------------------------------------------
-//  isPrime() - validates primeness
-//------------------------------------------------------------------------------
-int Store::isPrime(int n) {
-    int i,j=0;
-    for(i=1; i<=n; i++)
-    {
-        if(n%i == 0)
-            j++;
-    }
-    if(j == 2)
-        return 1;
-    else if(j > 2)
-        return 0;
-}
-//------------------------------------------------------------------------------
-//  getPrimeNumber() - returns closest prime number
-//------------------------------------------------------------------------------
-int Store::getPrimeNumber(int n) {
-    int i=n+1;
-    while(1)
-    {
-        if(isPrime(i))
-            break;
-        i++;
-    }
-    return i;
-
-}

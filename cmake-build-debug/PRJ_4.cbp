@@ -94,10 +94,19 @@
 		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/comedy.h">
 			<Option target="PRJ_4"/>
 		</Unit>
+		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/customer.cpp">
+			<Option target="PRJ_4"/>
+		</Unit>
 		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/customer.h">
 			<Option target="PRJ_4"/>
 		</Unit>
 		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/drama.h">
+			<Option target="PRJ_4"/>
+		</Unit>
+		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/hashEntry.h">
+			<Option target="PRJ_4"/>
+		</Unit>
+		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/hashtable.cpp">
 			<Option target="PRJ_4"/>
 		</Unit>
 		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/hashtable.h">

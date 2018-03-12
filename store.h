@@ -4,7 +4,7 @@
 #include <vector>
 #include <map>
 //#include "customer.h"
-//#include "hashtable.h"
+#include "hashtable.h"
 //#include "action.h"
 //#include "movie.h"
 
@@ -13,20 +13,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 class Store {
   private:
-      int hashSize;
-      //HashTable<Customer *> customerList;
-//      vector< vector<Movie *> > MovieList;
+      HashTable customerList;
+    //  vector< vector<Movie *> > MovieList;
 //      std::map<std::string, int> movieStock;   // key = title, int = stock
 
   public:
-      Store(std::string fileName);
-    //~Store();
-      int findHashSize(std::string fileName);
+      Store(std::string custDataFile);
+      ~Store();
       void loadCustList(std::string custDataFile);
-      void loadMovieList(std::string movieDataFile);
-      int getHashSize();
-      int isPrime(int n);
-      int getPrimeNumber(int n);
+     // void loadMovieList(std::string movieDataFile);
+      void showCustomers();
 };
 
 #endif

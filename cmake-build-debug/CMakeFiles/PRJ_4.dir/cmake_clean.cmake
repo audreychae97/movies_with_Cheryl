@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PRJ_4.dir/main.cpp.o"
   "CMakeFiles/PRJ_4.dir/store.cpp.o"
+  "CMakeFiles/PRJ_4.dir/customer.cpp.o"
+  "CMakeFiles/PRJ_4.dir/hashtable.cpp.o"
   "PRJ_4.pdb"
   "PRJ_4"
 )
