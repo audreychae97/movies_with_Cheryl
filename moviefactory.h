@@ -1,9 +1,7 @@
-#include<string>
-using namespace std;
-#include "movie.h";
+#ifndef MOVIEFACTORY_H
+#define MOVIEFACTORY_H
 
-#ifndef MOVIEFACTORY_H_
-#define MOVIEFACTORY_H_
+#include "movie.h"
 
 //---------------------------------------------------------------------------
 //Class MovieFactory. Creates an object of Movie type and
@@ -12,11 +10,14 @@ using namespace std;
 class MovieFactory {
 
 public:
-    MovieFactory();
-    ~MovieFactory();
+    MovieFactory() {};
+    virtual ~MovieFactory();
 
-    static Movie* createMovie(string type);
-
+    static Movie* createMovie(char type) {
+        switch(type) {
+	    case 'c':
+	        return new Comedy();
+	}
     /* Pseudocode
     swith(type);
     case "c"
@@ -26,12 +27,9 @@ public:
     case "f"
     Movie* m = new F, return m;
     */
-
+    }
 
 
 };
 
-
-
-
-#endif /* MOVIEFACTORY_H_ */
+#endif

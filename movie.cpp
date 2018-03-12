@@ -2,7 +2,7 @@
 #include "movie.h"
 
 //-------------------------Default Constructor---------------------------------
-// TODO WORK ON THIS
+// TODO
 Movie::Movie() {
 
 }

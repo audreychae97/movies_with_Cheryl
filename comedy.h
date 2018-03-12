@@ -1,9 +1,7 @@
-#include<string>
-using namespace std;
-#include "movie.h";
-
 #ifndef COMEDY_H_
 #define COMEDY_H_
+
+#include "movie.h"
 
 //---------------------------------------------------------------------------
 //Class Comedy, stores the information about each individual comedy movie.
@@ -11,21 +9,9 @@ using namespace std;
 //---------------------------------------------------------------------------
 
 class Comedy: public Movie {
-
-    // setters
-    void setTitle(string);
-    void setDirector(string);
-    void setYear(int year);
-
-    //getters
-    string getTitle() const;
-    string getDirector() const;
-    int getYear() const;
-
+public:    
+    Comedy() {};
+    virtual ~Comedy() {};
 };
 
-
-
-
-
-#endif /* COMEDY_H_ */
+#endif

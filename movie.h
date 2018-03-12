@@ -10,7 +10,7 @@
 //---------------------------------------------------------------------------
 
 class Movie {
-private:
+protected:
 	std::string title;
 	std::string director;
 	int year;

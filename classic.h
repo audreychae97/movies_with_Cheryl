@@ -1,9 +1,8 @@
-#include<string>
-using namespace std;
-#include "movie.h";
-
 #ifndef CLASSIC_H_
 #define CLASSIC_H_
+
+#include <string>
+#include "movie.h"
 
 //---------------------------------------------------------------------------
 //Class Classic, stores the information about each individual classic movie.
@@ -12,30 +11,20 @@ using namespace std;
 
 class Classic: public Movie {
 private:
-    string actor;
+    std::string actor;
     int month;
 
 public:
     Classic();
-    ~Classic();
+    virtual ~Classic();
 
-    //setters
-    void setTitle(string);
-    void setDirector(string);
-    void setYear(int year);
-    void setActor(string);
+    // Setters
+    void setActor(std::string);
     void setMonth(int month);
 
-    //getters
-    string getTitle() const;
-    string getDirector() const;
-    int getYear() const;
-    string getActor() const;
-    int getMonth() const;
-
-
+    // Getters
+    std::string getActor() const { return actor; };
+    int getMonth() const { return month; };
 };
 
-
-
-#endif /* CLASSIC_H_ */
+#endif

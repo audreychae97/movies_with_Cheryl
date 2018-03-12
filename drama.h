@@ -1,32 +1,17 @@
-#include<string>
-using namespace std;
-#include "movie.h";
-
 #ifndef DRAMA_H_
 #define DRAMA_H_
 
+#include "movie.h"
+
 //---------------------------------------------------------------------------
-//Class Drama, stores the information about each individual drama movie.
-// A child class to Movies.
+// The class Drama stores information about each individual drama movie. It
+// is a child of the Movie class.
 //---------------------------------------------------------------------------
 
 class Drama: public Movie {
 public:
-    Drama();
-    ~Drama();
-
-    // setters
-    void setTitle(string);
-    void setDirector(string);
-    void setYear(int year);
-
-    //getters
-    string getTitle() const;
-    string getDirector() const;
-    int getYear() const;
-
+    Drama() {};
+    virtual ~Drama() {};
 };
 
-
-
-#endif /* DRAMA_H_ */
+#endif
