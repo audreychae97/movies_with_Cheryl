@@ -2,6 +2,9 @@
 #define MOVIEFACTORY_H
 
 #include "movie.h"
+#include "classic.h"
+#include "drama.h"
+#include "comedy.h"
 
 //---------------------------------------------------------------------------
 //Class MovieFactory. Creates an object of Movie type and
@@ -10,26 +13,9 @@
 class MovieFactory {
 
 public:
-    MovieFactory() {};
-    virtual ~MovieFactory();
-
-    static Movie* createMovie(char type) {
-        switch(type) {
-	    case 'c':
-	        return new Comedy();
-	}
-    /* Pseudocode
-    swith(type);
-    case "c"
-    Movie* m = new C, return m;
-    case "d"
-    Movie* m = new D, return m;
-    case "f"
-    Movie* m = new F, return m;
-    */
-    }
-
-
+    MovieFactory();
+    //virtual ~MovieFactory();
+    static Movie* makeMovie(char type, std::string descr);
 };
 
 #endif

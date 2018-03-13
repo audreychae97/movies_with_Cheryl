@@ -11,11 +11,12 @@
 
 class Classic: public Movie {
 private:
-    std::string actor;
+    std::string majorActor;
     int month;
 
 public:
     Classic();
+    Classic(std::string descr);
     virtual ~Classic();
 
     // Setters
@@ -23,8 +24,13 @@ public:
     void setMonth(int month);
 
     // Getters
-    std::string getActor() const { return actor; };
+    std::string getActor() const { return majorActor; };
     int getMonth() const { return month; };
+    bool operator==(const Movie& movieThing);
+    bool operator>(const Movie& movieThing);
+    bool operator<(const Movie& movieThing);
+    void movieMaker(std::string descr);
+    void print();
 };
 
 #endif

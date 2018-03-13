@@ -3,13 +3,17 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include "moviefactory.h"
 using namespace std;
 
 Store::Store(std::string fileName){
 }
 Store::~Store(){
 }
-
+void Store::showCustomers(){
+    cout << "THE CUSTOMER TABLE:" << endl;
+    customerList.displayTable();
+}
 //------------------------------------------------------------------------------
 //  loadCustList() -reads in a text file containing customer data
 //                  1) parse the line to see first word in line (custID)
@@ -35,10 +39,6 @@ void Store::loadCustList(std::string custDataFile){
     }
 
 }
-void Store::showCustomers(){
-    cout << "THE CUSTOMER TABLE:" << endl;
-    customerList.displayTable();
-}
 //------------------------------------------------------------------------------
 //  loadMovieList() -reads in a text file containing movie data
 //                  1) parse line for first word = movie type
@@ -47,32 +47,26 @@ void Store::showCustomers(){
 //                  3) set all properties of the movie by parsing the rest
 //                  4) Push the movie to the movie* hashtable
 //------------------------------------------------------------------------------
-//void Store::loadMovieList(std::string movieDataFile){
-//    std::string token;
-//    string movieLine;
-//
-//    ifstream inFile;
-//    inFile.open(movieDataFile);
-//
-//
-//    if(!inFile){
-//        std::cout << "Could not open file: " + movieDataFile << endl;
-//    }
-//    else{
-//        getline (inFile, movieLine);
-//        std::istringstream ss(movieLine);
-//        while(std::getline(ss, token, ',')) {   //for each line = 1 movie
-//            std::cout << token << '\n';
-//            //Movie * m = MovieFactory.createMovie(token);
-//            //m.stock = next token
-//            //m.director = next token
-//            //m.title = next token
-//            //m.releaseYear = next token
-//
-//        }
-//        inFile.close();
-//    }
-//}
+void Store::loadMovieList(std::string movieDataFile){
+    std::string token;
+    string movieLine;
+    char type;
+    MovieFactory mFactory;
+
+    ifstream inFile;
+    inFile.open(movieDataFile);
+
+    if(!inFile){
+        std::cout << "Could not open file: " + movieDataFile << endl;
+    }
+    else{
+        while(!inFile.eof()){
+            getline (inFile, movieLine);
+            movieList.addMovie(movieLine);
+        }
+        inFile.close();
+    }
+}
 //------------------------------------------------------------------------------
         //while(getLine()){
         //  getLine() - read in first line of input

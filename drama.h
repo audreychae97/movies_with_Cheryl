@@ -10,8 +10,13 @@
 
 class Drama: public Movie {
 public:
-    Drama() {};
-    virtual ~Drama() {};
+    Drama();
+    Drama(std::string descr);
+    virtual ~Drama();
+    bool operator==(const Movie& movieThing);
+    bool operator>(const Movie& movieThing);
+    bool operator<(const Movie& movieThing);
+    void print();
 };
 
 #endif

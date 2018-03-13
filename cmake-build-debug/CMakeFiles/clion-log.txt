@@ -1,4 +1,8 @@
 /Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/audreychae/Desktop/movies_with_Cheryl
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug
+CMake Error at CMakeLists.txt:1:
+  Parse error.  Expected a command name, got unquoted argument with text
+  "ain.cpp".
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles/CMakeOutput.log".

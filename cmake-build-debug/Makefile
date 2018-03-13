@@ -123,114 +123,6 @@ PRJ_4/fast:
 	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/build
 .PHONY : PRJ_4/fast
 
-customer.o: customer.cpp.o
-
-.PHONY : customer.o
-
-# target to build an object file
-customer.cpp.o:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/customer.cpp.o
-.PHONY : customer.cpp.o
-
-customer.i: customer.cpp.i
-
-.PHONY : customer.i
-
-# target to preprocess a source file
-customer.cpp.i:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/customer.cpp.i
-.PHONY : customer.cpp.i
-
-customer.s: customer.cpp.s
-
-.PHONY : customer.s
-
-# target to generate assembly for a file
-customer.cpp.s:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/customer.cpp.s
-.PHONY : customer.cpp.s
-
-hashtable.o: hashtable.cpp.o
-
-.PHONY : hashtable.o
-
-# target to build an object file
-hashtable.cpp.o:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/hashtable.cpp.o
-.PHONY : hashtable.cpp.o
-
-hashtable.i: hashtable.cpp.i
-
-.PHONY : hashtable.i
-
-# target to preprocess a source file
-hashtable.cpp.i:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/hashtable.cpp.i
-.PHONY : hashtable.cpp.i
-
-hashtable.s: hashtable.cpp.s
-
-.PHONY : hashtable.s
-
-# target to generate assembly for a file
-hashtable.cpp.s:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/hashtable.cpp.s
-.PHONY : hashtable.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-store.o: store.cpp.o
-
-.PHONY : store.o
-
-# target to build an object file
-store.cpp.o:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/store.cpp.o
-.PHONY : store.cpp.o
-
-store.i: store.cpp.i
-
-.PHONY : store.i
-
-# target to preprocess a source file
-store.cpp.i:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/store.cpp.i
-.PHONY : store.cpp.i
-
-store.s: store.cpp.s
-
-.PHONY : store.s
-
-# target to generate assembly for a file
-store.cpp.s:
-	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/store.cpp.s
-.PHONY : store.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,18 +132,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... PRJ_4"
-	@echo "... customer.o"
-	@echo "... customer.i"
-	@echo "... customer.s"
-	@echo "... hashtable.o"
-	@echo "... hashtable.i"
-	@echo "... hashtable.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... store.o"
-	@echo "... store.i"
-	@echo "... store.s"
 .PHONY : help
 
 

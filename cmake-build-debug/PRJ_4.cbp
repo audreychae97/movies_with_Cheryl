@@ -82,60 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/action.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/borrow.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/classic.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/comedy.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/customer.cpp">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/customer.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/drama.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/hashEntry.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/hashtable.cpp">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/hashtable.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/history.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/inventory.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/main.cpp">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/movie.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/moviefactory.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/return.h">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/store.cpp">
-			<Option target="PRJ_4"/>
-		</Unit>
-		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/store.h">
-			<Option target="PRJ_4"/>
-		</Unit>
 		<Unit filename="/Users/audreychae/Desktop/movies_with_Cheryl/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
