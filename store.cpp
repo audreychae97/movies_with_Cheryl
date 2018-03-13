@@ -15,10 +15,10 @@ Store::~Store(){
 }
 
 //-------------------------showCustomers---------------------------------------
-/*void Store::showCustomers(){
-    cout << "THE CUSTOMER TABLE:" << endl;
+void Store::showCustomers(){
+    std::cout << "THE CUSTOMER TABLE:" << std::endl;
     customerList.displayTable();
-}*/
+}
 
 //--------------------------loadCustList---------------------------------------
 //  Reads in a text file containing customer data
@@ -85,18 +85,18 @@ void Store::loadMovieList(std::string movieDataFile){
         //}
 
 //------------------------readCommands-----------------------------------------
-//void Store::readCommands(std::string commandFile){
-//    ifstream inFile;
-//    inFile.open(commandFile);
-//
-//    if(!inFile){
-//        std::cout << "Could not open file: " + commandFile << endl;
-//    }
-//
-//    else{
-//
-//    }
-//}
+void Store::readCommands(std::string commandFile) {
+    std::ifstream inFile;
+    inFile.open(commandFile);
+
+    if(!inFile){
+        std::cout << "Could not open file: " + commandFile << std::endl;
+    }
+
+    else{
+
+    }
+}
 
 //------------------------sortMovieVector--------------------------------------
 //void Store::sortMovieVector(vector<Movie *>, char mType){

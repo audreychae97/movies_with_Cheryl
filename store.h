@@ -23,6 +23,7 @@ class Store {
       virtual ~Store();
       void loadCustList(std::string custDataFile);
       void loadMovieList(std::string movieDataFile);
+      void readCommands(std::string commandFile);
         //every time a new movie is made..
       void showCustomers();
 };
