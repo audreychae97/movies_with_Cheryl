@@ -10,7 +10,7 @@ int const COMEDY_INDEX = 2;
 
 class MovieList{
 private:
-    std::vector< std::vector<Movie * > > movieList;
+    std::vector< std::vector<Movie*>> movieList;
 
 public:
     MovieList();

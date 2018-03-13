@@ -1,23 +1,22 @@
+#include <iostream>
 #include "moviefactory.h"
 
+//------------------------Default Constructor----------------------------------
 MovieFactory::MovieFactory() {};
-//virtual ~MovieFactory();
 
+//------------------------Destructor-------------------------------------------
+//MovieFactory::~MovieFactory();
 
+//------------------------makeMovie--------------------------------------------
+// Makes the appropriate movie type given the type
 Movie* MovieFactory::makeMovie(char type, std::string descr){
-        switch(type) {
-            case 'F':
-            {
-                Movie* f = new Comedy(descr); return f;
-            }
-            case 'D':
-            {
-                Movie* d = new Drama(descr); return d;
-            }
-            case 'C':
-            {
-                Movie* c = new Classic(descr); return c;
-            }
-        }
+    switch(type) {
+        case 'F': 
+            return new Comedy(descr);
+        case 'D': 
+            return new Drama(descr);
+        case 'C':
+            return new Classic(descr);
+    }
 }
 

@@ -1,26 +1,31 @@
-#include "store.h"
-#include "customer.h"
+#include <string>
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include "store.h"
+#include "customer.h"
 #include "moviefactory.h"
-using namespace std;
 
+//--------------------------Default Constructor--------------------------------
 Store::Store(std::string fileName){
 }
+
+// ------------------------Destructor------------------------------------------
 Store::~Store(){
 }
-void Store::showCustomers(){
+
+//-------------------------showCustomers---------------------------------------
+/*void Store::showCustomers(){
     cout << "THE CUSTOMER TABLE:" << endl;
     customerList.displayTable();
 }
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 //  loadCustList() -reads in a text file containing customer data
 //                  1) parse the line to see first word in line (custID)
 //                  2) create customer object
 //                  3) rad in the rest of the customer properties
 //                  4) push customer object into hash table
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 void Store::loadCustList(std::string custDataFile){
     string customerLine;
 
@@ -38,7 +43,8 @@ void Store::loadCustList(std::string custDataFile){
         inFile.close();
     }
 
-}
+}*/
+
 //------------------------------------------------------------------------------
 //  loadMovieList() -reads in a text file containing movie data
 //                  1) parse line for first word = movie type
@@ -49,24 +55,29 @@ void Store::loadCustList(std::string custDataFile){
 //------------------------------------------------------------------------------
 void Store::loadMovieList(std::string movieDataFile){
     std::string token;
-    string movieLine;
+    std::string movieLine;
     char type;
     MovieFactory mFactory;
 
-    ifstream inFile;
+    std::fstream inFile;
     inFile.open(movieDataFile);
 
     if(!inFile){
-        std::cout << "Could not open file: " + movieDataFile << endl;
+        std::cout << "Could not open file: " + movieDataFile << std::endl;
     }
-    else{
+    else {
+        std::cout << "inside loadMovieList" << std::endl;	//TODO DELETE
         while(!inFile.eof()){
             getline (inFile, movieLine);
             movieList.addMovie(movieLine);
+	    std::cout << "going to next iteration of addMovie" << std::endl;	//TODO DELETE
         }
+	std::cout << "outside while loop" << std::endl;		//TODO DELETE
         inFile.close();
+	std::cout << "closed file" << std::endl;		// TODO DELETE
     }
 }
+
 //------------------------------------------------------------------------------
         //while(getLine()){
         //  getLine() - read in first line of input

@@ -11,7 +11,7 @@
 class Drama: public Movie {
 public:
     Drama();
-    Drama(std::string descr);
+    Drama(std::string descr):Movie(descr) {}
     virtual ~Drama();
     bool operator==(const Movie& movieThing);
     bool operator>(const Movie& movieThing);

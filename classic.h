@@ -2,6 +2,7 @@
 #define CLASSIC_H_
 
 #include <string>
+#include <sstream>
 #include "movie.h"
 
 //---------------------------------------------------------------------------

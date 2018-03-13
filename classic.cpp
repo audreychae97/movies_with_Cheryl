@@ -7,12 +7,12 @@ using namespace std;
 Classic::Classic(){
     title = "";
     director = "";
-    genre = '';
+    genre = 'c';	//TODO CHANGE BACK TO ''
     year = -1;
     stock = -1;
     majorActor = "";
 }
-Classic::Classic(string descr){
+Classic::Classic(string descr):Movie(descr) {
     string sTitle;
     string sDirector;
     char tGenre;
@@ -35,7 +35,7 @@ Classic::Classic(string descr){
     stock = mStock;
     majorActor = mActor;
 }
-virtual Classic::~Classic(){
+Classic::~Classic(){
 
 }
 // Setters
