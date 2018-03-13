@@ -66,15 +66,11 @@ void Store::loadMovieList(std::string movieDataFile){
         std::cout << "Could not open file: " + movieDataFile << std::endl;
     }
     else {
-        std::cout << "inside loadMovieList" << std::endl;	//TODO DELETE
         while(!inFile.eof()){
             getline (inFile, movieLine);
             movieList.addMovie(movieLine);
-	    std::cout << "going to next iteration of addMovie" << std::endl;	//TODO DELETE
         }
-	std::cout << "outside while loop" << std::endl;		//TODO DELETE
         inFile.close();
-	std::cout << "closed file" << std::endl;		// TODO DELETE
     }
 }
 

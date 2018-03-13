@@ -2,6 +2,7 @@
 #define MOVIELIST_H
 
 #include "movie.h"
+#include <array>
 #include <vector>
 
 int const DRAMA_INDEX = 0;
@@ -10,7 +11,7 @@ int const COMEDY_INDEX = 2;
 
 class MovieList{
 private:
-    std::vector< std::vector<Movie*>> movieList;
+    std::array<std::vector<Movie*>, 10> movieList;
 
 public:
     MovieList();

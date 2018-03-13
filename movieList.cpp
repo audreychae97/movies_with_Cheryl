@@ -24,22 +24,16 @@ bool MovieList::addMovie(std::string movieDescription){
     ss >> mType;
     
     Movie* newMovie = mFactory.makeMovie(mType, movieDescription);
-    std::cout << "outside of switch in addMovie" << std::endl;	//TODO DELETE
-    std::cout << "mType is " << mType << std::endl;	 	//TODO DELETE
     //push to vector at correct genre bucket
     switch(mType){
         case 'D':   //Drama is the bucket at Index 0
             movieList.at(DRAMA_INDEX).push_back(newMovie);
-	    std::cout << "entered D" << std::endl;		//TODO DELETE
             return true;
         case 'C':   //Classic is the bucket at index 1
-	    std::cout << "before pushing into C" << std::endl;	//TODO DELETE
-            movieList.at(CLASSIC_INDEX).push_back(newMovie);		//TODO PROBLEM!!
-            std::cout << "entered C" << std::endl;		//TODO DELETE
+            movieList.at(CLASSIC_INDEX).push_back(newMovie);
             return true;
         case 'F':   //Comedy is the bucket at index 2
             movieList.at(COMEDY_INDEX).push_back(newMovie);
-	    std::cout << "entered F" << std::endl;		//TODO DELETE
             return true;
         default:
             //need to push the product into a new bucket/.. for a new genre.
@@ -47,7 +41,6 @@ bool MovieList::addMovie(std::string movieDescription){
 	    std::cout << "new genre!" << std::endl;
             return false;
     }
-    std::cout << "done with switch" << std::endl;	//TODO DELETE
 }
 
 //-----------------------addStock----------------------------------------------
