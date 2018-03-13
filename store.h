@@ -19,7 +19,7 @@ class Store {
 //      std::map<std::string, int> movieStock;   // key = title, int = stock
 
   public:
-      Store(std::string custDataFile);
+      Store();
       virtual ~Store();
       void loadCustList(std::string custDataFile);
       void loadMovieList(std::string movieDataFile);

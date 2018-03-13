@@ -7,7 +7,7 @@
 #include "moviefactory.h"
 
 //--------------------------Default Constructor--------------------------------
-Store::Store(std::string fileName){
+Store::Store(){
 }
 
 // ------------------------Destructor------------------------------------------

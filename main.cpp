@@ -4,7 +4,7 @@
 
 int main() {
     std::cout << "begin" << std::endl;
-    Store * store = new Store("data4customers.txt");
+    Store * store = new Store();
     std::cout << "loading movie list" << std::endl;	//TODO DELETE
     store->loadMovieList("data4movies.txt");
     std::cout << "done loading movie list; loading custList" << std::endl; 	//TODO DELETE
