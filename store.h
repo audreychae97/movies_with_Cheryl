@@ -14,7 +14,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 class Store {
   private:
-//      HashTable customerList;
+      HashTable customerList;
       MovieList movieList;
 //      std::map<std::string, int> movieStock;   // key = title, int = stock
 
@@ -26,5 +26,5 @@ class Store {
         //every time a new movie is made..
       void showCustomers();
 };
-
 #endif
+
