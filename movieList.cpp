@@ -57,3 +57,4 @@ bool MovieList::removeStock(){
 void MovieList::printByGenre(char type){
 
 }
+
