@@ -57,7 +57,7 @@ void Store::loadCustList(std::string custDataFile){
 void Store::loadMovieList(std::string movieDataFile){
     std::string token;
     std::string movieLine;
-    char type;
+    char mtype;
     MovieFactory mFactory;
 
     std::fstream inFile;
@@ -97,7 +97,9 @@ void Store::readCommands(std::string commandFile) {
 
     }
 }
-
+void Store::showMoviesByGenre(char type){
+    movieList.printByGenre(type);
+}
 //------------------------sortMovieVector--------------------------------------
 //void Store::sortMovieVector(vector<Movie *>, char mType){
         //the movie vector is passed in (Drama, Classical, Comedy)

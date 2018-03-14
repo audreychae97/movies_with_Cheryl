@@ -2,6 +2,7 @@
 #include <iostream>
 #include "movie.h"
 #include <sstream>
+#include <fstream>
 using namespace std;
 
 //-------------------------Default Constructor---------------------------------
@@ -9,28 +10,29 @@ using namespace std;
 Movie::Movie() {
     title = "";
     director = "";
-    genre = 'C';		//TODO CHANGE BACK TO ''
+    genre = '\0';
     year = 0;
 }
 Movie::Movie(std::string descr){
     string sTitle;
     string sDirector;
-    char tGenre;
-    int rYear;
-    int mStock;
+    string tGenre;
+    string rYear;
+    string mStock;
 
     istringstream ss(descr);
-    ss >> sTitle;
-    ss >> sDirector;
-    ss >> tGenre;
-    ss >> rYear;
-    ss >> mStock;
+
+    std::getline(ss, tGenre, ',');
+    std::getline(ss, mStock, ',');
+    std::getline(ss, sDirector, ',');
+    std::getline(ss, sTitle, ',');
+    std::getline(ss, rYear, ',');
 
     title = sTitle;
     director = sDirector;
-    genre = tGenre;
-    year = rYear;
-    stock = mStock;
+    genre = tGenre[0];
+    year = stoi(rYear);
+    stock = stoi(mStock);
 }
 
 //------------------------Destructor-------------------------------------------
@@ -61,9 +63,10 @@ void Movie::setGenre(char genre) {
     this->genre = genre;
 }
 
-//void Movie::print(){
-//    std::cout << genre << "," << stock << "," << director << "," <<
-//              title << "," << year << std::endl;
-//}
+void Movie::print() const{
+    std::cout << genre << ", " << stock << ", " << title << ", " << director << ", " << title << ", "
+              << year << endl;
+ }
+
 
 

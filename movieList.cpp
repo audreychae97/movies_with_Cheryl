@@ -54,7 +54,25 @@ bool MovieList::removeStock(){
 }
 
 //-----------------------printByGenre------------------------------------------
-void MovieList::printByGenre(char type){
-
+void MovieList::printByGenre(char type) const{
+    switch(type){
+        case 'D':
+            printer(DRAMA_INDEX);
+            break;
+        case 'C':
+            printer(CLASSIC_INDEX);
+            break;
+        case 'F':
+            printer(COMEDY_INDEX);
+            break;
+        default:
+            printer(-1);
+            break;
+    }
+}
+void MovieList::printer(int index) const{
+    for(int i =0; i < movieList[index].size(); i++){
+        movieList[index].at(i)->print();
+    }
 }
 

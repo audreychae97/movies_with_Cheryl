@@ -25,6 +25,7 @@ public:
     void readCommands(std::string commandFile);
     //every time a new movie is made..
     void showCustomers();
+    void showMoviesByGenre(char type);
 };
 #endif
 

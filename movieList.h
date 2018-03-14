@@ -13,14 +13,14 @@ int const COMEDY_INDEX = 2;
 class MovieList{
 private:
     std::array<std::vector<Movie*>, 10> movieList;
-
 public:
     MovieList();
     ~MovieList();
     bool addMovie(std::string movieDescription);
     bool addStock(std::string movieTitle, char genreType);
     bool removeStock();
-    void printByGenre(char type);
+    void printByGenre(char type) const;
+    void printer(int index) const;
 
 
 };

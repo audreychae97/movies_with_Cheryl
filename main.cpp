@@ -9,7 +9,8 @@ int main() {
     store->loadCustList("data4customers.txt");
     store->readCommands("data4commands.txt");
     std::cout << std::endl;
-    store->showCustomers();
+    //store->showMoviesByGenre('C');
+
     std::cout << "end" << std::endl;			//TODO DELETE
     return 0;
 }
