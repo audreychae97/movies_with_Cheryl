@@ -1,3 +1,7 @@
+// Audrey Chae and Cheryl Mok CSS 343
+// Date Created: February 27, 2018
+// Last Modified: March 14, 2018
+
 #ifndef MOVIE_H_
 #define MOVIE_H_
 
@@ -34,7 +38,7 @@ public:
 	std::string getDirector() const { return director; };
 	int getYear() const { return year; };
 	int getStock() const { return stock; };
-    virtual void print() const;
+        virtual void print() const;
 
 	// Methods
 	//virtual void print() = 0; //pure virtual .. different for at least 1 so make it lie that
