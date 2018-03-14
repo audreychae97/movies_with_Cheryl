@@ -13,7 +13,6 @@ int const COMEDY_INDEX = 2;
 class MovieList{
 private:
     std::array<std::vector<Movie*>, 10> movieList;
-    std::map<std::string, int> movieStock;	//TODO DO WE WANT THIS HERE?
 
 public:
     MovieList();

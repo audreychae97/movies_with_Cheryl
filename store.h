@@ -16,7 +16,6 @@ class Store {
 private:
     HashTable customerList;
     MovieList movieList;
-//    std::map<std::string, int> movieStock;		// TODO DELETE??
 
 public:
     Store();
