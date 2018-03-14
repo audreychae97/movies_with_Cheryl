@@ -1,20 +1,41 @@
+// Audrey Chae and Cheryl Mok CSS 343
+// Date Created: February 27, 2018
+// Last Modified: March 14, 2018
+
 #include "drama.h"
+
+//-----------------------------------------------------------------------------
+// The Drama class stores information about each individual drama movie. This 
+// class is derived from the Movie class.
+//-----------------------------------------------------------------------------
 
 //-----------------------Destructor--------------------------------------------
 Drama::~Drama() {
 }
 
 //----------------------Operator ==--------------------------------------------
-bool Drama::operator==(const Movie& movieThing){
-    //what are the criterias for an equal movie ?
+// Equality operator; tests whether this drama class has the same data as other
+bool Drama::operator ==(const Movie& other) const{
+    return title == other.getTitle() && director == other.getDirector() &&
+	    genre == other.getGenre() && year == other.getYear();
 }
 
 //----------------------Operator >---------------------------------------------
-bool Drama::operator>(const Movie& movieThing){
-
+// Greater than operator; tests whether this drama object is greater than
+// other (based on director, then title)
+bool Drama::operator >(const Movie& other) const{
+    if (director != other.getDirector()) {
+        return director > other.getDirector();
+    } else if (title != other.getTitle()) {
+        return title > other.getTitle();
+    } else {
+	    return false;
+    }
 }
 
 //---------------------Operator <----------------------------------------------
-bool Drama::operator<(const Movie& movieThing){
-
+// Less than operator; tests whether this drama class is less than other;
+// based on director,then title
+bool Drama::operator <(const Movie& other) const{
+    return !(*this > other);
 }
