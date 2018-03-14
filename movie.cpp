@@ -7,7 +7,6 @@
 #include "movie.h"
 #include <sstream>
 #include <fstream>
-using namespace std;
 
 //-------------------------Default Constructor---------------------------------
 // TODO
@@ -18,13 +17,13 @@ Movie::Movie() {
     year = 0;
 }
 Movie::Movie(std::string descr){
-    string sTitle;
-    string sDirector;
-    string tGenre;
-    string rYear;
-    string mStock;
+    std::string sTitle;
+    std::string sDirector;
+    std::string tGenre;
+    std::string rYear;
+    std::string mStock;
 
-    istringstream ss(descr);
+    std::istringstream ss(descr);
 
     std::getline(ss, tGenre, ',');
     std::getline(ss, mStock, ',');
@@ -35,7 +34,7 @@ Movie::Movie(std::string descr){
     title = sTitle;
     director = sDirector;
     genre = tGenre[0];
-    year = stoi(rYear);
+    year = std::stoi(rYear);
     stock = stoi(mStock);
 }
 
