@@ -3,7 +3,10 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
-using namespace std;
+
+//-----------------------------------------------------------------------------
+// The Customer class contains customer information/actionHistory of a customer
+//-----------------------------------------------------------------------------
 
 //-----------------------Default Constructor-----------------------------------
 Customer::Customer(){
@@ -13,6 +16,7 @@ Customer::Customer(){
 }
 
 //----------------------Constructor--------------------------------------------
+// Constructor that accepts a string
 Customer::Customer(const string & infoString){
     string cID;
     string fName;
