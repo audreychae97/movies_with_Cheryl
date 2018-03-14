@@ -19,17 +19,17 @@ Classic::Classic(){
 }
 
 //--------------------Constructor----------------------------------------------
-Classic::Classic(string descr){
-    string sTitle;
-    string sDirector;
-    string tGenre;
-    string rYear;
-    string mStock;
-    string fName;
-    string lName;
-    string mMonth;
+Classic::Classic(std::string descr) {
+    std::string sTitle;
+    std::string sDirector;
+    std::string tGenre;
+    std::string rYear;
+    std::string mStock;
+    std::string fName;
+    std::string lName;
+    std::string mMonth;
 
-    istringstream ss(descr);
+    std::istringstream ss(descr);
 
     std::getline(ss, tGenre, ',');
     std::getline(ss, mStock, ',');
@@ -43,7 +43,7 @@ Classic::Classic(string descr){
     std::getline(ss, rYear, ' ');
 
     genre = tGenre[0];
-    stock = stoi(mStock);
+    stock = std::stoi(mStock);
 
     director = sDirector;
     std::cout << "direct = " << director << std::endl;
