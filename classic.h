@@ -16,8 +16,9 @@
 
 class Classic: public Movie {
 private:
-    std::string firstName;
-    std::string lastName;
+    std::string actorFirstName;
+    std::string actorLastName;
+    std::string director;
     int month;
 
 public:
@@ -31,8 +32,8 @@ public:
     void setMonth(int month);
 
     // Getters
-    std::string getFirstName() const { return firstName; };
-    std::string getLastName() const { return lastName; };
+    std::string getFirstName() const { return actorFirstName; };
+    std::string getLastName() const { return actorLastName; };
     int getMonth() const { return month; };
     bool operator==(const Movie& movieThing);
     bool operator>(const Movie& movieThing);

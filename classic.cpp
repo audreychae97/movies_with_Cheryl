@@ -11,15 +11,11 @@ using namespace std;
 Classic::Classic(){
     title = "";
     director = "";
-<<<<<<< HEAD
     genre = '\0';
-=======
-    genre = '\0';	
->>>>>>> e4d8bc339dafec769f943b0aa54246749a65d8eb
     year = -1;
     stock = -1;
-    firstName = "";
-    lastName = "";
+    actorFirstName = "";
+    actorLastName = "";
 }
 Classic::Classic(string descr){
     string sTitle;
@@ -36,6 +32,7 @@ Classic::Classic(string descr){
     std::getline(ss, tGenre, ',');
     std::getline(ss, mStock, ',');
     std::getline(ss, sDirector, ',');
+    std::cout << "sDirector = " << sDirector << std::endl;
     std::getline(ss, sTitle, ',');
 
     std::getline(ss, fName, ' ');
@@ -43,25 +40,27 @@ Classic::Classic(string descr){
     std::getline(ss, mMonth, ' ');
     std::getline(ss, rYear, ' ');
 
-//    genre = tGenre[0];
-//    stock = stoi(mStock);
-//    director = sDirector;
-//    title = sTitle;
-//    director = sDirector;
-//    firstName = fName;
-//    lastName = lName;
-//    month = stoi(mMonth);
-//    year = stoi(rYear);
+    genre = tGenre[0];
+    stock = stoi(mStock);
+
+    director = sDirector;
+    std::cout << "direct = " << director << std::endl;
+    title = sTitle;
+    director = sDirector;
+    actorFirstName = fName;
+    actorLastName = lName;
+   // month = stoi(mMonth);
+    //year = stoi(rYear);
 }
 Classic::~Classic(){
 
 }
 // Setters
 void Classic::setFirstName(std::string firstName){
-    this->firstName = firstName;
+   actorFirstName = firstName;
 }
 void Classic::setLastName(std::string lastName){
-    this->lastName = lastName;
+   actorFirstName = lastName;
 }
 void Classic::setMonth(int month){
     this->month = month;
@@ -76,6 +75,7 @@ bool Classic::operator<(const Movie& movieThing){
 
 }
 void Classic::print() const{
-    std::cout << genre << " , " << stock <<" , " << director <<" , "<< title << " , " <<
-              firstName << " " << lastName << " " << month << " " << year << std::endl;
+    std::cout << "inside print: " << director << std::endl;
+    std::cout << genre << " , " << stock <<" , " << director << " , "<< title << " , " <<
+              actorFirstName << " " << actorLastName << " " << month << " " << year << std::endl;
 }
