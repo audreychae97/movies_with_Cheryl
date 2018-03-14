@@ -9,7 +9,7 @@ using namespace std;
 Movie::Movie() {
     title = "";
     director = "";
-    genre = 'C';		//TODO CHANGE BACK TO ''
+    genre = '\0';
     year = 0;
 }
 Movie::Movie(std::string descr){

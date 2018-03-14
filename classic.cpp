@@ -7,7 +7,7 @@ using namespace std;
 Classic::Classic(){
     title = "";
     director = "";
-    genre = 'c';	//TODO CHANGE BACK TO ''
+    genre = '\0';	//TODO CHANGE BACK TO ''
     year = -1;
     stock = -1;
     majorActor = "";
