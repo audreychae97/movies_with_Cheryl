@@ -6,18 +6,22 @@
 #include <iostream>
 #include <sstream>
 
-using namespace std;
-
+//-----------------------Default Constructor-----------------------------------
 Comedy::Comedy(){
     //inherited from movie parent class
 }
 
+//-----------------------Operator ==-------------------------------------------
 bool Comedy::operator==(const Movie& movieThing){
-    //what are the criterias for an equal movie ?
+    
 }
+
+//-----------------------Operator >--------------------------------------------
 bool Comedy::operator>(const Movie& movieThing){
 
 }
+
+//-----------------------Operator <--------------------------------------------
 bool Comedy::operator<(const Movie& movieThing){
 
 }

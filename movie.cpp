@@ -65,10 +65,12 @@ void Movie::setGenre(char genre) {
     this->genre = genre;
 }
 
+//-------------------------print-----------------------------------------------
 void Movie::print() const{
     std::cout << genre << ", " << stock << ", " << title << ", ";
     std::cout << director << ", " << title << ", " << year << std::endl;
  }
 
-
+//-------------------------Operator ==-----------------------------------------
+// Overloading operator == TODO
 
