@@ -36,10 +36,8 @@ Movie::Movie(std::string descr){
 }
 
 //------------------------Destructor-------------------------------------------
-// TODO
-//Movie::~Movie() {
-//
-//}
+Movie::~Movie() {
+}
 
 //------------------------setTitle---------------------------------------------
 // Sets the title
@@ -59,6 +57,7 @@ void Movie::setYear(int year) {
     this->year = year;
 }
 
+//-------------------------setGenre--------------------------------------------
 void Movie::setGenre(char genre) {
     this->genre = genre;
 }
