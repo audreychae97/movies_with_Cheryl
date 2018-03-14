@@ -19,7 +19,7 @@ protected:
 public:
 	Movie();
 	Movie(std::string descr);
-	//virtual ~Movie();
+	virtual ~Movie();
 
 	// setters
 	void setTitle(std::string title);

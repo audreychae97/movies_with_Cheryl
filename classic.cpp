@@ -6,8 +6,8 @@
 #include <iostream>
 #include "classic.h"
 #include <sstream>
-using namespace std;
 
+//--------------------Default Constructor--------------------------------------
 Classic::Classic(){
     title = "";
     director = "";
@@ -17,6 +17,8 @@ Classic::Classic(){
     actorFirstName = "";
     actorLastName = "";
 }
+
+//--------------------Constructor----------------------------------------------
 Classic::Classic(string descr){
     string sTitle;
     string sDirector;
@@ -50,30 +52,48 @@ Classic::Classic(string descr){
     month = stoi(mMonth);
     year = stoi(rYear);
 }
+
+//---------------------Destructor----------------------------------------------
 Classic::~Classic(){
 
 }
-// Setters
+//---------------------setFirstName--------------------------------------------
+// Sets the firstName
 void Classic::setFirstName(std::string firstName){
    actorFirstName = firstName;
 }
+
+//---------------------setLastName---------------------------------------------
+// Sets the lastName
 void Classic::setLastName(std::string lastName){
    actorFirstName = lastName;
 }
+
+//---------------------setMonth------------------------------------------------
+// Sets the month
 void Classic::setMonth(int month){
     this->month = month;
 }
+
+//--------------------Operator =-----------------------------------------------
 bool Classic::operator==(const Movie& movieThing){
     //what are the criterias for an equal movie ?
 }
+
+//--------------------Operator >-----------------------------------------------
 bool Classic::operator>(const Movie& movieThing){
 
 }
+
+//--------------------Operator <----------------------------------------------
 bool Classic::operator<(const Movie& movieThing){
 
 }
+
+//--------------------print----------------------------------------------------
+// Prints out the movie details
 void Classic::print() const{
-    std::cout << "inside print: " << director << std::endl;
-    std::cout << genre << " , " << stock <<" , " << director << " , "<< title << " , " <<
-              actorFirstName << " " << actorLastName << " " << month << " " << year << std::endl;
+    std::cout << genre << " , " << stock <<" , " << director << " , ";
+    std::cout << title << " , " << actorFirstName << " " << actorLastName;
+    std::cout << " " << month << " " << year << std::endl;
 }
