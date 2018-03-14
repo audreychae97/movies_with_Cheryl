@@ -34,6 +34,8 @@ public:
 	std::string getDirector() const { return director; };
 	int getYear() const { return year; };
 	int getStock() const { return stock; };
+
+	// Methods
 	//virtual void print() = 0; //pure virtual .. different for at least 1 so make it lie that
 //	virtual bool operator==(const Movie& movieThing) = 0;
 //	virtual bool operator<(const Movie& movieThing) = 0;
