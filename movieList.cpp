@@ -11,7 +11,13 @@ MovieList::MovieList(){
 
 //----------------------Destructor---------------------------------------------
 MovieList::~MovieList(){
-
+    for (int genre = 0; genre < 3; genre++) {
+        for (int movieIndex = 0; movieIndex < movieList.at(genre).size();
+			movieIndex++) {
+	    delete movieList.at(genre).at(movieIndex);
+	}
+	movieList.at(genre).clear();
+    }
 }
 
 //-----------------------addMovie----------------------------------------------
