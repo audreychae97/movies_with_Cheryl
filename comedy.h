@@ -1,3 +1,7 @@
+// Audrey Chae and Cheryl Mok CSS 343
+// Date Created: February 27, 2018
+// Last Modified: March 14, 2018
+
 #ifndef COMEDY_H_
 #define COMEDY_H_
 
