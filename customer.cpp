@@ -1,3 +1,7 @@
+// Audrey Chae and Cheryl Mok CSS 343
+// Date Created: February 27, 2018
+// Last Modified: March 13, 2018
+
 #include "customer.h"
 #include "hashtable.h"
 #include <fstream>
@@ -17,12 +21,12 @@ Customer::Customer(){
 
 //----------------------Constructor--------------------------------------------
 // Constructor that accepts a string
-Customer::Customer(const string & infoString){
-    string cID;
-    string fName;
-    string lName;
+Customer::Customer(const std::string & infoString){
+    std::string cID;
+    std::string fName;
+    std::string lName;
 
-    istringstream ss(infoString);
+    std::istringstream ss(infoString);
     ss >> cID;
     ss >> fName;
     ss >> lName;
@@ -62,12 +66,13 @@ int Customer::getCustID(){
 
 //----------------------getFirstName-------------------------------------------
 // Returns firstName
-string Customer::getFirstName() {
+std::string Customer::getFirstName() {
     return firstName;
 }
 
 //----------------------getLastName--------------------------------------------
 // Returns lastName
-string Customer::getLastName(){
+std::string Customer::getLastName(){
     return lastName;
 }
+

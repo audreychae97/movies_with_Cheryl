@@ -1,5 +1,10 @@
+// Audrey Chae and Cheryl Mok CSS 343
+// Date Created: February 27, 2018
+// Last Modified: March 13, 2018
+
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
+
 #include <vector>
 #include <string>
 #include <iostream>
@@ -26,5 +31,5 @@ class Customer {
         std::string getFirstName();		// returns firstName
         std::string getLastName();		// returns lastName
 };
-
 #endif
+
