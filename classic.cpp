@@ -34,9 +34,8 @@ Classic::Classic(std::string descr) {
     std::getline(ss, tGenre, ',');
     std::getline(ss, mStock, ',');
     std::getline(ss, sDirector, ',');
-    std::cout << "sDirector = " << sDirector << std::endl;
     std::getline(ss, sTitle, ',');
-
+    std::getline(ss, fName, ' ');
     std::getline(ss, fName, ' ');
     std::getline(ss, lName, ' ');
     std::getline(ss, mMonth, ' ');
@@ -46,13 +45,12 @@ Classic::Classic(std::string descr) {
     stock = std::stoi(mStock);
 
     director = sDirector;
-    std::cout << "direct = " << director << std::endl;
     title = sTitle;
     director = sDirector;
     actorFirstName = fName;
     actorLastName = lName;
-   // month = stoi(mMonth);
-    //year = stoi(rYear);
+    month = stoi(mMonth);
+    year = stoi(rYear);
 }
 
 //---------------------Destructor----------------------------------------------
