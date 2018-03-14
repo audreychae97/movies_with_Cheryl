@@ -20,6 +20,7 @@ private:
     std::string actorLastName;
     std::string director;
     int month;
+    int year;
 
 public:
     Classic();
