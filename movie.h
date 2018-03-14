@@ -15,36 +15,36 @@
 
 class Movie {
 protected:
-	std::string title;
-	std::string director;
-	char genre;
-	int year;
-	int stock;
+	std::string title;		// stores the title
+	std::string director;		// stores the director
+	char genre;			// stores the genre
+	int year;			// stores the year it was released
+	int stock;			// stores the stock
 public:
-	Movie();
-	Movie(std::string descr);
-	virtual ~Movie();
+	Movie();			// Default Constructor
+	Movie(std::string descr);	// Constructor with 1 param
+	virtual ~Movie();		// Destructor
 
 	// setters
-	void setTitle(std::string title);
-	void setDirector(std::string director);
-	void setYear(int year);
-	void setStock(int stock);
-	void setGenre(char genre);
+	void setTitle(std::string title);	// Sets the title
+	void setDirector(std::string director);	// Sets the director
+	void setYear(int year);			// Sets the year
+	void setStock(int stock);		// Sets the stock
+	void setGenre(char genre);		// Sets the genre
 
 	//getters
-	char getGenre() const{return genre;};
-	std::string getTitle() const { return title; };
-	std::string getDirector() const { return director; };
-	int getYear() const { return year; };
-	int getStock() const { return stock; };
-        virtual void print() const;
+	char getGenre() const{return genre;};		// gets the genre
+	std::string getTitle() const { return title; };	// gets the title
+	std::string getDirector() const { return director; }; // gets director
+	int getYear() const { return year; };		// gets the year
+	int getStock() const { return stock; };		// gets the stock
+        virtual void print() const;			// prints out its data
 
 	// Methods
 	//virtual void print() = 0; //pure virtual .. different for at least 1 so make it lie that
-//	virtual bool operator==(const Movie& movieThing) = 0;
-//	virtual bool operator<(const Movie& movieThing) = 0;
-//	virtual bool operator>(const Movie& movieThing) = 0;
+//	virtual bool operator ==(const Movie& movieThing) const = 0;
+//	virtual bool operator <(const Movie& movieThing) const = 0;
+//	virtual bool operator >(const Movie& movieThing) const = 0;
 
 };
 

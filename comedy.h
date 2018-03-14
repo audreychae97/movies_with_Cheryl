@@ -7,20 +7,20 @@
 
 #include "movie.h"
 
-//---------------------------------------------------------------------------
-//Class Comedy, stores the information about each individual comedy movie.
-// A child class to Movies.
-//---------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// The Comedy class stores information about each individual comedy movie.
+// This class derives from the Movie class.
+//-----------------------------------------------------------------------------
 
 class Comedy: public Movie {
-public:    
-    Comedy();
-    Comedy(std::string descr):Movie(descr) {}
-    virtual ~Comedy() {};
-    bool operator==(const Movie& movieThing);
-    bool operator>(const Movie& movieThing);
-    bool operator<(const Movie& movieThing);
-    void print();
+public:   
+    Comedy();					// Default Constructor 
+    Comedy(std::string descr):Movie(descr) {}	// Constructor w/ 1 param
+    virtual ~Comedy() {};			// Destructor
+    bool operator ==(const Movie& movieThing) const;	// Equality operator
+    bool operator >(const Movie& movieThing) const;	// Greater than oper
+    bool operator <(const Movie& movieThing) const;	// Less than operator
+    void print();					// prints out its data
 };
 
 #endif
