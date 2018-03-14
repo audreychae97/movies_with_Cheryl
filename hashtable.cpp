@@ -1,22 +1,22 @@
+// Audrey Chae and Cheryl Mok CSS 343
+// Date Created: February 27, 2018
+// Last Modified: March 13, 2018
+
 #include "hashtable.h"
 #include "customer.h"
 #include <string>
 #include <fstream>
 #include <iostream>
 #include <sstream>
-using namespace std;
 
 HashTable::HashTable(){
     for(int i = 0; i < ARRAY_SIZE; i++){
         hashtable[i].push_back(NULL);
     }
 }
-//------------------------------------------------------------------------------
-//  destructor
-//------------------------------------------------------------------------------
-
+//---------------------------Destructor-----------------------------------------
 HashTable::~HashTable() {
-    cout << "SUP " << endl;
+    std::cout << "SUP " << std::endl;
     for(int i= 0; i < ARRAY_SIZE; i++){ //for each bucket...
         for(int j = 0; j < hashtable[i].size(); j++){ //and each vector
             hashtable[i].at(j) = nullptr;
@@ -24,6 +24,7 @@ HashTable::~HashTable() {
         }
     }
 }
+
 //------------------------------------------------------------------------------
 //  put() -
 //  figure out the size of the array we are hashing
@@ -32,7 +33,7 @@ HashTable::~HashTable() {
 // HANDLE COLLISIONS
 // INSE
 //------------------------------------------------------------------------------
-void HashTable::put(string custDescr){
+void HashTable::put(std::string custDescr){
     int custID;
     //first create a customer object
     Customer* newCust = new Customer(custDescr);
@@ -41,6 +42,7 @@ void HashTable::put(string custDescr){
 
     hashtable[pos].push_back(newCust);
 }
+
 //------------------------------------------------------------------------------
 //  getItem()-
 //------------------------------------------------------------------------------
@@ -57,6 +59,7 @@ Customer* HashTable::getItem(int custID) {
         }
     }
 }
+
 //------------------------------------------------------------------------------
 //  displayTable() - displays all of the elements in the hash table
 //------------------------------------------------------------------------------
@@ -70,12 +73,12 @@ void HashTable::displayTable(){
                 if(!hashtable[i].at(j)){
                     //TODO FIX THIS TOOOOOO
                 }else {
-                    cout << "[CUSTOMER ID]: " << hashtable[i].at(j)->getCustID()
-                         << endl;
-                    cout << "[FIRST NAME]: " << hashtable[i].at(j)->getFirstName()
-                         << endl;
-                    cout << "[LAST NAME]: " << hashtable[i].at(j)->getLastName()
-                         << endl;
+		    std::cout << "[CUSTOMER ID]: " << hashtable[i].at(j)->getCustID()
+                         << std::endl;
+		    std::cout << "[FIRST NAME]: " << hashtable[i].at(j)->getFirstName()
+                         << std::endl;
+		    std::cout << "[LAST NAME]: " << hashtable[i].at(j)->getLastName()
+                         << std::endl;
                 }
             }
         }

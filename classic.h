@@ -1,3 +1,7 @@
+// Audrey Chae and Cheryl Mok CSS 343
+// Date Created: February 27, 2018
+// Last Modified: March 13, 2018
+
 #ifndef CLASSIC_H_
 #define CLASSIC_H_
 

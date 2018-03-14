@@ -1,3 +1,7 @@
+// Audrey Chae and Cheryl Mok CSS 343
+// Date Created: February 27, 2018
+// Last Modified: March 13, 2018
+
 #include <string>
 #include <iostream>
 #include "classic.h"
@@ -7,7 +11,7 @@ using namespace std;
 Classic::Classic(){
     title = "";
     director = "";
-    genre = '\0';	//TODO CHANGE BACK TO ''
+    genre = '\0';	
     year = -1;
     stock = -1;
     majorActor = "";
