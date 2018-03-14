@@ -9,23 +9,23 @@
 #include "movieList.h"
 #include "movie.h"
 
-////////////////////////////////////////////////////////////////////////////////
-//  STORE - The store class that manages the customers and movies
-////////////////////////////////////////////////////////////////////////////////
+//-----------------------------------------------------------------------------
+// The store class manages the customers and movies
+//-----------------------------------------------------------------------------
 class Store {
-  private:
-      HashTable customerList;
-      MovieList movieList;
-//      std::map<std::string, int> movieStock;   // key = title, int = stock
+private:
+    HashTable customerList;
+    MovieList movieList;
+//    std::map<std::string, int> movieStock;		// TODO DELETE??
 
-  public:
-      Store();
-      virtual ~Store();
-      void loadCustList(std::string custDataFile);
-      void loadMovieList(std::string movieDataFile);
-      void readCommands(std::string commandFile);
-        //every time a new movie is made..
-      void showCustomers();
+public:
+    Store();
+    virtual ~Store();
+    void loadCustList(std::string custDataFile);
+    void loadMovieList(std::string movieDataFile);
+    void readCommands(std::string commandFile);
+    //every time a new movie is made..
+    void showCustomers();
 };
 #endif
 
