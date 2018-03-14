@@ -7,6 +7,11 @@
 #include "classic.h"
 #include <sstream>
 
+//-----------------------------------------------------------------------------
+// The Classic class stores information about each individual classic movie.
+// This classs derives from the Movie class.
+//-----------------------------------------------------------------------------
+
 //--------------------Default Constructor--------------------------------------
 Classic::Classic(){
     title = "";
@@ -19,6 +24,7 @@ Classic::Classic(){
 }
 
 //--------------------Constructor----------------------------------------------
+// Constructor accepts a string parameter
 Classic::Classic(std::string descr) {
     std::string sTitle;
     std::string sDirector;
@@ -57,6 +63,7 @@ Classic::Classic(std::string descr) {
 Classic::~Classic(){
 
 }
+
 //---------------------setFirstName--------------------------------------------
 // Sets the firstName
 void Classic::setFirstName(std::string firstName){
@@ -75,19 +82,31 @@ void Classic::setMonth(int month){
     this->month = month;
 }
 
-//--------------------Operator =-----------------------------------------------
-bool Classic::operator==(const Movie& movieThing){
-    //what are the criterias for an equal movie ?
+//--------------------Operator ==----------------------------------------------
+// Equality operator; checks whether this object has the same data as other;
+// based on release date, then major actor
+bool Classic::operator ==(Movie& otherM) const {
+    if (genre == otherM.getGenre()) {
+	    Classic& other = dynamic_cast<Classic&>(otherM);
+	    return actorFirstName == other.getFirstName() &&
+		actorLastName == other.getLastName() &&
+		month == other.getMonth();
+    }
+    return false;
 }
 
 //--------------------Operator >-----------------------------------------------
-bool Classic::operator>(const Movie& movieThing){
+// Greater than operator; tests whether this object is greater than other; 
+// based on release date, then major actor
+bool Classic::operator >(const Movie& other) const{
 
 }
 
 //--------------------Operator <----------------------------------------------
-bool Classic::operator<(const Movie& movieThing){
-
+// Less than operator; tests whether this object is less than other; based on
+// release date, then major actor
+bool Classic::operator <(const Movie& other) const{
+    return !(*this > other);
 }
 
 //--------------------print----------------------------------------------------
@@ -97,3 +116,4 @@ void Classic::print() const{
     std::cout << title << " , " << actorFirstName << " " << actorLastName;
     std::cout << " " << month << " " << year << std::endl;
 }
+
