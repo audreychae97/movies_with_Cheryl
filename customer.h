@@ -10,21 +10,21 @@
 
 class Customer {
     private:
-        int custID;
-        std::string firstName;
-        std::string lastName;
-        std::vector<std::string> actionHistory;
+        int custID;				// stores customer's id
+        std::string firstName;			// stores customer's first name
+        std::string lastName;			// stores customer's last name
+        std::vector<std::string> actionHistory;	// stores customer's actions
 
     public:
-        Customer();
-        Customer(const std::string & infoString);
-        ~Customer();
-        void setID(int ID);
-        void setFirstName(std::string fName);
-        void setLastName(std::string lName);
-        int getCustID();
-        std::string getFirstName();
-        std::string getLastName();
+        Customer();				// Default Constructor
+        Customer(const std::string & infoString);   // Constructor w/ 1 param
+        ~Customer();				// Destructor
+        void setID(int ID);			// Sets custID
+        void setFirstName(std::string fName);	// Sets firstName
+        void setLastName(std::string lName);	// Sets lastName
+        int getCustID();			// returns custID
+        std::string getFirstName();		// returns firstName
+        std::string getLastName();		// returns lastName
 };
 
 #endif

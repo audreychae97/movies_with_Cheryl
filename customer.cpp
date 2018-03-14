@@ -33,31 +33,37 @@ Customer::~Customer(){
 }
 
 //----------------------setID--------------------------------------------------
+// Sets the custID with given ID
 void Customer::setID(int ID){
     custID = ID;
 }
 
 //----------------------setFirstName-------------------------------------------
+// Sets firstName with given fName
 void Customer::setFirstName(std::string fName){
     firstName = fName;
 }
 
 //----------------------setLastName--------------------------------------------
+// Sets lastName with lName
 void Customer::setLastName(std::string lName){
     lastName = lName;
 }
 
 //----------------------getCustID----------------------------------------------
+// Returns the custID
 int Customer::getCustID(){
     return custID;
 }
 
 //----------------------getFirstName-------------------------------------------
+// Returns firstName
 string Customer::getFirstName() {
     return firstName;
 }
 
 //----------------------getLastName--------------------------------------------
+// Returns lastName
 string Customer::getLastName(){
     return lastName;
 }
