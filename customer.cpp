@@ -5,11 +5,14 @@
 #include <sstream>
 using namespace std;
 
+//-----------------------Default Constructor-----------------------------------
 Customer::Customer(){
     firstName = "";
     lastName = "";
     custID = -1;
 }
+
+//----------------------Constructor--------------------------------------------
 Customer::Customer(const string & infoString){
     string cID;
     string fName;
@@ -23,29 +26,38 @@ Customer::Customer(const string & infoString){
     custID = stoi(cID);
     firstName = fName;
     lastName = lName;
-    //TODO: Fix endl... thing for reading in
-//    cout << "In the customer constructor: " << endl;
-//    cout << "ID = " << custID << endl;
-//    cout << "FirstName = " << firstName << endl;
-//    cout << "LastName = " << lastName << endl;
 }
+
+//----------------------Destructor---------------------------------------------
 Customer::~Customer(){
 }
+
+//----------------------setID--------------------------------------------------
 void Customer::setID(int ID){
     custID = ID;
 }
+
+//----------------------setFirstName-------------------------------------------
 void Customer::setFirstName(std::string fName){
     firstName = fName;
 }
+
+//----------------------setLastName--------------------------------------------
 void Customer::setLastName(std::string lName){
     lastName = lName;
 }
+
+//----------------------getCustID----------------------------------------------
 int Customer::getCustID(){
     return custID;
 }
-string Customer::getFirstName() { //do we want these to pass in a value, search by paramter? or are we using these on object
+
+//----------------------getFirstName-------------------------------------------
+string Customer::getFirstName() {
     return firstName;
 }
+
+//----------------------getLastName--------------------------------------------
 string Customer::getLastName(){
     return lastName;
 }
