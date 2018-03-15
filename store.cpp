@@ -93,7 +93,6 @@ void Store::readCommands(std::string commandFile) {
     if(!inFile){
         std::cout << "Could not open file: " + commandFile << std::endl;
     }
-
     else{
         while(!inFile.eof()){
             getline (inFile, commandLine);
@@ -134,7 +133,7 @@ void Store::showMoviesByGenre(char type){
 //------------------------------------------------------------------------------
 //  printInventory() - method that prints all items in the store
 //------------------------------------------------------------------------------
-void Store::printInventory() const{
+void Store::printInventory() const{ //TODO SORT THEMMMM
     std::cout << "Inventory of Store:"  << std::endl;
     std::cout << "-------COMEDY------- " << std::endl;
     movieList.printByGenre('F');
@@ -149,6 +148,7 @@ void Store::printInventory() const{
 //  borrowMovie() - method for borrowing a movie-- adds to cust history
 //------------------------------------------------------------------------------
 bool Store::borrowMovie(std::string moveLine){
+    //find the movie in the movieList.... subtract stock
 
 }
 //------------------------------------------------------------------------------
