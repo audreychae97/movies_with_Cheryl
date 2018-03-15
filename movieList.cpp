@@ -45,13 +45,16 @@ bool MovieList::addMovie(std::string movieDescription){
         //push to vector at correct genre bucket
         switch(mType){
             case 'D':   //Drama is the bucket at Index 0
-                movieList.at(DRAMA_INDEX).push_back(newMovie);
+                //movieList.at(DRAMA_INDEX).push_back(newMovie);
+		addMovieHelper(DRAMA_INDEX, newMovie);
                 return true;
             case 'C':   //Classic is the bucket at index 1
-                movieList.at(CLASSIC_INDEX).push_back(newMovie);
+                //movieList.at(CLASSIC_INDEX).push_back(newMovie);
+		addMovieHelper(CLASSIC_INDEX, newMovie);
                 return true;
             case 'F':   //Comedy is the bucket at index 2
-                movieList.at(COMEDY_INDEX).push_back(newMovie);
+                //movieList.at(COMEDY_INDEX).push_back(newMovie);
+		addMovieHelper(COMEDY_INDEX, newMovie);
                 return true;
             default:
                 // TODO need to push the product into a new bucket/.. for a new genre.
@@ -75,8 +78,22 @@ bool MovieList::isDuplicate(std::string tempMovie, char mType) {
 }
 
 //-----------------------addMovieHelper----------------------------------------
-void Classic::addMovieHelper(int genre) {
+void MovieList::addMovieHelper(int genre, const Movie* newMovie) {
     std::vector<Movie*> genreList = movieList.at(genre);
+    int newMovieIndex = -1;
+
+    for (int i = 0; i < genreList.size(); i++) {
+        if (i == 0 && genreList.at(i) > newMovie) {
+            newMovieIndex = 0;
+	    break;
+	}
+    }
+
+    /*if (newMovieIndex == -1) {
+        genreList.push_back(newMovie);
+    } else {
+        genreList.insert(genreList.begin() + 5, newMovie);
+    }*/
 }
 
 //-----------------------addStock----------------------------------------------
@@ -84,7 +101,8 @@ bool MovieList::addStock(std::string movieTitle, char genreType){
     switch(genreType) {
         case 'D':
             addStockHelper(movieTitle, DRAMA_INDEX);
-        case 'C':
+	    case 'C':
+
             addStockHelper(movieTitle, CLASSIC_INDEX);
         case 'F':
             addStockHelper(movieTitle, COMEDY_INDEX);

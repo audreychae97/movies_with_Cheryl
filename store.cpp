@@ -172,19 +172,4 @@ bool Store::printCustHistory(std::string commandLine){
     histForCust->printHistory();
 
 }
->>>>>>> Stashed changes
-//------------------------sortMovieVector--------------------------------------
-//void Store::sortMovieVector(vector<Movie *>, char mType){
-        //the movie vector is passed in (Drama, Classical, Comedy)
-        // along with the Movie type character ('D', 'C', 'F')
-
-        //switch(mType){
-        //  case 'D':
-        //sort movies by Director, then Title
-        //  case 'F':
-        //sort movies by Title, then year it was released
-        //  case 'C':
-        //sort movies by Release Date, then Major Actor
-        //}
-//}
 

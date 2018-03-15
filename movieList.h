@@ -15,7 +15,7 @@ private:
     std::array<std::vector<Movie*>, 10> movieList; // Stores Movies
 
     void addStockHelper(std::string, int); // Helps addStock, takes title,type
-    void addMovieHelper();		   // Helps addMovie
+    void addMovieHelper(int, const Movie*);      // Helps addMovie
 
 public:
     MovieList();					// Default Constructor
