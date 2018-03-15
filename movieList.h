@@ -25,6 +25,7 @@ public:
     bool removeStock();					// -1 to movie stock
     void printByGenre(char type) const;	// Prints all movies from genre
     void printer(int index) const;	// Helper method to printByGenre
+    bool isDuplicate(std::string tempMovie, char mType);
 
 };
 #endif

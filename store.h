@@ -23,6 +23,15 @@ public:
     void loadCustList(std::string custDataFile);
     void loadMovieList(std::string movieDataFile);
     void readCommands(std::string commandFile);
+
+
+    void printInventory() const;  // I
+    bool borrowMovie(std::string moveLine); // B
+    bool returnMovie(std::string movieLine);    //E
+    bool printCustHistory(std::string commandLine); //H
+    void commander(char type, int custID, std::string commandLine);
+
+
     //every time a new movie is made..
     void showCustomers();
     void showMoviesByGenre(char type);

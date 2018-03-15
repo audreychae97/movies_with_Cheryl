@@ -10,6 +10,7 @@ int main() {
     store->readCommands("data4commands.txt");
     std::cout << std::endl;
     store->showMoviesByGenre('F');
+    store->printInventory();
 
     std::cout << "end" << std::endl;			//TODO DELETE
     return 0;

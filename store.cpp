@@ -57,8 +57,6 @@ void Store::loadCustList(std::string custDataFile){
 void Store::loadMovieList(std::string movieDataFile){
     std::string token;
     std::string movieLine;
-    char mtype;
-    MovieFactory mFactory;
 
     std::fstream inFile;
     inFile.open(movieDataFile);
@@ -87,23 +85,94 @@ void Store::loadMovieList(std::string movieDataFile){
 //------------------------readCommands-----------------------------------------
 void Store::readCommands(std::string commandFile) {
     std::ifstream inFile;
+    std::string commandLine;
+    char type = '\0';
+    int custID;
     inFile.open(commandFile);
 
     if(!inFile){
         std::cout << "Could not open file: " + commandFile << std::endl;
     }
-
     else{
-
+        while(!inFile.eof()){
+            getline (inFile, commandLine);
+            std::istringstream ss(commandLine);
+            ss >> type;
+            ss >> custID;
+            commander(type, custID, commandLine);
+        }
+        inFile.close();
     }
 }
 
-//------------------------showMoviesByGenre------------------------------------
-// Prints the movie by given genre type
+void Store::commander(char ctype, int custID, std::string commandLine){
+    switch(ctype){
+        case 'B':
+            borrowMovie(commandLine);
+            break;
+        case 'R':
+            returnMovie(commandLine);
+            break;
+        case 'I':
+            printInventory();
+            break;
+        case 'H':
+            printCustHistory(commandLine);
+            break;
+        default:
+            std::cout << "Invalid command found" << std::endl;
+            break;
+    }
+}
+//------------------------------------------------------------------------------
+//  showMoviesByGenre() - displays all movies by genre
+//------------------------------------------------------------------------------
 void Store::showMoviesByGenre(char type){
     movieList.printByGenre(type);
 }
+//------------------------------------------------------------------------------
+//  printInventory() - method that prints all items in the store
+//------------------------------------------------------------------------------
+void Store::printInventory() const{ //TODO SORT THEMMMM
+    std::cout << "Inventory of Store:"  << std::endl;
+    std::cout << "-------COMEDY------- " << std::endl;
+    movieList.printByGenre('F');
+    std::cout << "-------DRAMA------- " << std::endl;
+    movieList.printByGenre('D');
+    std::cout << "-------CLASSIC------- " << std::endl;
+    movieList.printByGenre('C');
 
+
+}
+//------------------------------------------------------------------------------
+//  borrowMovie() - method for borrowing a movie-- adds to cust history
+//------------------------------------------------------------------------------
+bool Store::borrowMovie(std::string moveLine){
+    //find the movie in the movieList.... subtract stock
+
+}
+//------------------------------------------------------------------------------
+//  returnMovie() - method for returning a movie -- adds to cust history
+//------------------------------------------------------------------------------
+bool Store::returnMovie(std::string movieLine){
+
+}
+//------------------------------------------------------------------------------
+//  printInventory() - method that prints all items in the store
+//------------------------------------------------------------------------------
+bool Store::printCustHistory(std::string commandLine){
+    int custID;
+
+    std::istringstream ss(commandLine);
+    ss >> custID >> custID;
+    std::cout <<"inside printCustHistory... CustID = " << custID << std::endl;
+
+    Customer * histForCust = customerList.getItem(custID);
+
+    histForCust->printHistory();
+
+}
+>>>>>>> Stashed changes
 //------------------------sortMovieVector--------------------------------------
 //void Store::sortMovieVector(vector<Movie *>, char mType){
         //the movie vector is passed in (Drama, Classical, Comedy)

@@ -75,4 +75,7 @@ std::string Customer::getFirstName() {
 std::string Customer::getLastName(){
     return lastName;
 }
+void Customer::printHistory() const {
+
+}
 
