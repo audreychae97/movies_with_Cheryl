@@ -60,9 +60,6 @@ bool MovieList::addMovie(std::string movieDescription){
 		addMovieHelper(COMEDY_INDEX, newMovie);
                 return true;
             default:
-                // TODO need to push the product into a new bucket/.. for a new genre.
-                //not going to worry about this yet
-                std::cout << "new genre!" << std::endl;
                 return false;
         }
     }
