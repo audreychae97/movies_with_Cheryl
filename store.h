@@ -30,7 +30,7 @@ public:
     bool returnMovie(std::string movieLine, char cType, int custID);    //E
     bool printCustHistory(std::string commandLine); //H
     void commander(char type, int custID, std::string commandLine);
-
+    bool genreChecker(char mType) const;
 
     //every time a new movie is made..
     void showCustomers();

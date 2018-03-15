@@ -17,6 +17,8 @@ Movie* MovieFactory::makeMovie(char type, std::string descr){
             return new Drama(descr);
         case 'C':
             return new Classic(descr);
+        default:
+            return nullptr;
     }
 }
 
