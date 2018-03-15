@@ -76,6 +76,10 @@ void MovieList::printByGenre(char type) const{
             break;
     }
 }
+
+//-----------------------printer-----------------------------------------------
+// Given the index of movieList, this method will call the print method for 
+// each movie
 void MovieList::printer(int index) const{
     for(int i =0; i < movieList[index].size(); i++){
         movieList[index].at(i)->print();
