@@ -28,7 +28,7 @@ public:
     void printInventory() const;  // I
     bool borrowMovie(std::string moveLine, char cType, int custID); // B
     bool returnMovie(std::string movieLine, char cType, int custID);    //E
-    bool printCustHistory(std::string commandLine); //H
+    bool printCustHistory(int custID); //H
     void commander(char type, int custID, std::string commandLine);
     bool genreChecker(char mType) const;
 
