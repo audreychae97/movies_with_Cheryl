@@ -35,7 +35,6 @@ bool MovieList::addMovie(std::string movieDescription){
     std::getline(ss, mTitle, ',');
     std::getline(ss, mTitle, ',');
 
-    std::cout << "Movie title from inside movieList: " << mTitle;
     //TODO Check for classic movies too
 
     if(isDuplicate(mTitle, mType)){ //if movie exists, add it to the same
@@ -91,11 +90,12 @@ bool MovieList::isDuplicate(std::string tempMovie, char mType) {
 //-----------------------addMovieHelper----------------------------------------
 void MovieList::addMovieHelper(int genre, Movie* newMovie) {
     int newMovieIndex = -1;
-
     for (int i = 0; i < movieList.at(genre).size(); i++) {
         if (i == 0 && movieList.at(genre).at(i) > newMovie) {
             newMovieIndex = 0;
 	    break;
+	} else if (movieList.at(genre).at(i) < newMovie) {
+	    newMovieIndex = i - 1;
 	}
     }
 
@@ -104,6 +104,7 @@ void MovieList::addMovieHelper(int genre, Movie* newMovie) {
     } else {
         movieList.at(genre).insert(movieList.at(genre).begin() + 
 			newMovieIndex, newMovie);
+	std::cout << movieList.at(genre).at(newMovieIndex)->getTitle() << std::endl;
     }
 }
 
