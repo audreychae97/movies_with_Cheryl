@@ -8,11 +8,9 @@
 // The Drama class stores information about each individual drama movie. This 
 // class is derived from the Movie class.
 //-----------------------------------------------------------------------------
-
-//-----------------------Destructor--------------------------------------------
-Drama::~Drama() {
+Drama::Drama(){
+    //inherited from movie parent class
 }
-
 //----------------------Operator ==--------------------------------------------
 // Equality operator; tests whether this drama class has the same data as other
 bool Drama::operator ==(const Movie& other) const{
@@ -38,4 +36,7 @@ bool Drama::operator >(const Movie& other) const{
 // based on director,then title
 bool Drama::operator <(const Movie& other) const{
     return !(*this > other);
+}
+void Drama::print(){
+
 }

@@ -15,8 +15,8 @@
 class Drama: public Movie {
 public:
     Drama();					// Default Constructor
-    Drama(std::string descr):Movie(descr) {}	// Constructor w/ 1 param
-    virtual ~Drama();				// Destructor
+    Drama(std::string descr):Movie(descr){}	// Constructor w/ 1 param
+    virtual ~Drama(){};				// Destructor
     bool operator ==(const Movie& movieThing) const;	// Equality operator
     bool operator >(const Movie& movieThing) const;	// Greater than oper
     bool operator <(const Movie& movieThing) const;	// Less than operator
