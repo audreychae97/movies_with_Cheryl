@@ -49,15 +49,12 @@ bool MovieList::addMovie(std::string movieDescription){
         //push to vector at correct genre bucket
         switch(mType){
             case 'D':   //Drama is the bucket at Index 0
-                //movieList.at(DRAMA_INDEX).push_back(newMovie);
 		addMovieHelper(DRAMA_INDEX, newMovie);
                 return true;
             case 'C':   //Classic is the bucket at index 1
-                //movieList.at(CLASSIC_INDEX).push_back(newMovie);
 		addMovieHelper(CLASSIC_INDEX, newMovie);
                 return true;
             case 'F':   //Comedy is the bucket at index 2
-                //movieList.at(COMEDY_INDEX).push_back(newMovie);
 		addMovieHelper(COMEDY_INDEX, newMovie);
                 return true;
             default:
