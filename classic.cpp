@@ -87,7 +87,6 @@ void Classic::setMonth(int month){
 /*bool Classic::operator ==(Movie& other) const {
     if (genre == other.getGenre()) {
 	Classic& newClassic = dynamic_cast<Classic&>(other);
-	return actorFirstName == newClassic.getFirstName() &&
 	    actorLastName == newClassic.getLastName() &&
 	    month == newClassic.getMonth();
     }

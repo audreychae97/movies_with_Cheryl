@@ -15,6 +15,7 @@ private:
     std::array<std::vector<Movie*>, 10> movieList; // Stores Movies
 
     void addStockHelper(std::string, int); // Helps addStock, takes title,type
+    void addMovieHelper();		   // Helps addMovie
 
 public:
     MovieList();					// Default Constructor
@@ -24,7 +25,6 @@ public:
     bool removeStock();					// -1 to movie stock
     void printByGenre(char type) const;	// Prints all movies from genre
     void printer(int index) const;	// Helper method to printByGenre
-
 
 };
 #endif

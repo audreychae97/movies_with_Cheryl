@@ -49,6 +49,11 @@ bool MovieList::addMovie(std::string movieDescription){
     }
 }
 
+//-----------------------addMovieHelper----------------------------------------
+void Classic::addMovieHelper(int genre) {
+    std::vector<Movie*> genreList = movieList.at(genre);
+}
+
 //-----------------------addStock----------------------------------------------
 bool MovieList::addStock(std::string movieTitle, char genreType){
     switch(genreType) {
@@ -97,4 +102,3 @@ void MovieList::printer(int index) const{
         movieList[index].at(i)->print();
     }
 }
-
