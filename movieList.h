@@ -27,6 +27,10 @@ public:
     void printByGenre(char type) const;	// Prints all movies from genre
     void printer(int index) const;	// Helper method to printByGenre
     bool isDuplicate(std::string tempMovie, char mType);
+<<<<<<< Updated upstream
+=======
+    std::string titleGetter(std::string movieLine);
+>>>>>>> Stashed changes
 
 };
 #endif

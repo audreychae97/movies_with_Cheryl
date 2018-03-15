@@ -67,8 +67,8 @@ void Movie::setGenre(char genre) {
 
 //-------------------------print-----------------------------------------------
 void Movie::print() const{
-    std::cout << genre << ", " << stock << ", " << director << ", ";
-    std::cout << title << ", " << year << std::endl;
+    std::cout << genre << ", " << stock << ", ";
+    std::cout << director << ", " << title << ", " << year << std::endl;
 }
 void Movie::setStock(int stock) {
     this->stock = stock;

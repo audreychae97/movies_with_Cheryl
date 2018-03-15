@@ -8,6 +8,7 @@ int main() {
     store->loadMovieList("data4movies.txt");
     store->loadCustList("data4customers.txt");
     store->readCommands("data4commands.txt");
+
     std::cout << std::endl;
     store->showMoviesByGenre('F');
     store->printInventory();
