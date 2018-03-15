@@ -51,7 +51,19 @@ bool MovieList::addMovie(std::string movieDescription){
 
 //-----------------------addStock----------------------------------------------
 bool MovieList::addStock(std::string movieTitle, char genreType){
+    switch(genreType) {
+        case 'D':
+            addStockHelper(movieTitle, DRAMA_INDEX);
+        case 'C':
+	case 'F':
+    }
+}
 
+//-----------------------addStockHelper----------------------------------------
+// Helper method for addStock; finds movie within movieList and increases 
+// stock by 1
+void MovieList::addStockHelper(std::string movieTitle, int genre) {
+    
 }
 
 //-----------------------removeStock-------------------------------------------

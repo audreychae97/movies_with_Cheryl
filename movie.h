@@ -38,7 +38,7 @@ public:
 	std::string getDirector() const { return director; }; // gets director
 	int getYear() const { return year; };		// gets the year
 	int getStock() const { return stock; };		// gets the stock
-        virtual void print() const;			// prints out its data
+	virtual void print() const;			// prints out its data
 
 	// Methods
 	//virtual void print() = 0; //pure virtual .. different for at least 1 so make it like that

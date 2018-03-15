@@ -12,15 +12,18 @@ int const COMEDY_INDEX = 2;
 
 class MovieList{
 private:
-    std::array<std::vector<Movie*>, 10> movieList;
+    std::array<std::vector<Movie*>, 10> movieList; // Stores Movies
+
+    void addStockHelper(std::string, int); // Helps addStock, takes title,type
+
 public:
-    MovieList();
-    ~MovieList();
-    bool addMovie(std::string movieDescription);
-    bool addStock(std::string movieTitle, char genreType);
-    bool removeStock();
-    void printByGenre(char type) const;
-    void printer(int index) const;
+    MovieList();					// Default Constructor
+    ~MovieList();					// Destructor
+    bool addMovie(std::string movieDescription);	// Adds movie to list
+    bool addStock(std::string movieTitle, char genreType); // +1 to movie stock
+    bool removeStock();					// -1 to movie stock
+    void printByGenre(char type) const;	// Prints all movies from genre
+    void printer(int index) const;	// Helper method to printByGenre
 
 
 };
