@@ -55,7 +55,7 @@ void Store::loadCustList(std::string custDataFile){
 //     4) Push the movie to the movie* hashtable
 //------------------------------------------------------------------------------
 void Store::loadMovieList(std::string movieDataFile){
-    std::string token;
+    char token;
     std::string movieLine;
 
     std::fstream inFile;
@@ -67,12 +67,26 @@ void Store::loadMovieList(std::string movieDataFile){
     else {
         while(!inFile.eof()){
             getline (inFile, movieLine);
-            movieList.addMovie(movieLine);
+            std::istringstream ss(movieLine);
+            ss >> token;
+            if(genreChecker(token)){
+                movieList.addMovie(movieLine);
+            }
+            else{
+                std::cout << "That's an invalid genre type" << std::endl;
+            }
         }
         inFile.close();
     }
 }
-
+bool Store::genreChecker(char mType) const {
+    if(mType == 'C' || mType == 'D' || mType == 'F'){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 //------------------------------------------------------------------------------
         //while(getLine()){
         //  getLine() - read in first line of input

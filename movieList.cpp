@@ -33,6 +33,7 @@ bool MovieList::addMovie(std::string movieDescription){
     std::getline(ss, mTitle, ',');
     std::getline(ss, mTitle, ',');
     std::getline(ss, mTitle, ',');
+    std::getline(ss, mTitle, ',');
 
     std::cout << "Movie title from inside movieList: " << mTitle;
     //TODO Check for classic movies too
@@ -79,15 +80,13 @@ bool MovieList::isDuplicate(std::string tempMovie, char mType) {
             index = CLASSIC_INDEX;
             break;
         default:
-            index = -1;
-            break;
+            return false;
     }
     for(int i=0; i < movieList[index].size(); i++){
         if(movieList[index].at(i)->getTitle() == tempMovie){
             return true;
         }
         else{ //TODO Fix this
-            std::cout << "poop " << std::endl;
         }
     }
 }
