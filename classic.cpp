@@ -108,9 +108,9 @@ bool Classic::operator >(const Movie& other) const{
 bool Classic::operator <(const Movie& other) const{
     const Classic& newOther = dynamic_cast<const Classic&>(other);
 
-    if (year > newOther.getYear()) {
+    if (year < newOther.getYear()) {
 	return true;
-    } else if (year > newOther.getYear()) {
+    } else if (year < newOther.getYear()) {
 	return false;
     } else {
 	if (month < newOther.getMonth()) {
