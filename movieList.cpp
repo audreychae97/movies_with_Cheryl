@@ -30,7 +30,10 @@ bool MovieList::addMovie(std::string movieDescription){
 
     std::stringstream ss(movieDescription);
     ss >> mType;
-    ss >> mTitle >> mTitle >> mTitle;
+    std::getline(ss, mTitle, ',');
+    std::getline(ss, mTitle, ',');
+    std::getline(ss, mTitle, ',');
+
     std::cout << "Movie title from inside movieList: " << mTitle;
     //TODO Check for classic movies too
 
