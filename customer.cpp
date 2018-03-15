@@ -83,9 +83,10 @@ void Customer::printHistory() const {
         std::cout << actionHistory.at(i) << std::endl;
     }
 }
+
 //----------------------addAction--------------------------------------------
 void Customer::addAction(std::string actionLine){
-    actionLine.erase (actionLine.begin()+1);
+    actionLine.erase (2,5);
     std::cout << "Adding action: " << actionLine << '\n';
     actionHistory.push_back(actionLine);
 
