@@ -30,6 +30,8 @@ class Customer {
         int getCustID();			// returns custID
         std::string getFirstName();		// returns firstName
         std::string getLastName();		// returns lastName
+        void printHistory() const;
+
 };
 #endif
 

@@ -6,6 +6,8 @@
 #include <iostream>
 #include "classic.h"
 #include <sstream>
+#include <fstream>
+
 
 //-----------------------------------------------------------------------------
 // The Classic class stores information about each individual classic movie.
@@ -24,8 +26,7 @@ Classic::Classic(){
 }
 
 //--------------------Constructor----------------------------------------------
-// Constructor accepts a string parameter
-Classic::Classic(std::string descr) {
+Classic::Classic(std::string descr){
     std::string sTitle;
     std::string sDirector;
     std::string tGenre;
