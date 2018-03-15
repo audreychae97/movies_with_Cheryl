@@ -92,22 +92,22 @@ bool MovieList::isDuplicate(std::string tempMovie, char mType) {
 }
 
 //-----------------------addMovieHelper----------------------------------------
-void MovieList::addMovieHelper(int genre, const Movie* newMovie) {
-    std::vector<Movie*> genreList = movieList.at(genre);
+void MovieList::addMovieHelper(int genre, Movie* newMovie) {
     int newMovieIndex = -1;
 
-    for (int i = 0; i < genreList.size(); i++) {
-        if (i == 0 && genreList.at(i) > newMovie) {
+    for (int i = 0; i < movieList.at(genre).size(); i++) {
+        if (i == 0 && movieList.at(genre).at(i) > newMovie) {
             newMovieIndex = 0;
 	    break;
 	}
     }
 
-    /*if (newMovieIndex == -1) {
-        genreList.push_back(newMovie);
+    if (newMovieIndex == -1) {
+        movieList.at(genre).push_back(newMovie);
     } else {
-        genreList.insert(genreList.begin() + 5, newMovie);
-    }*/
+        movieList.at(genre).insert(movieList.at(genre).begin() + 
+			newMovieIndex, newMovie);
+    }
 }
 
 //-----------------------addStock----------------------------------------------
