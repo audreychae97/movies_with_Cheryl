@@ -108,10 +108,10 @@ void Store::readCommands(std::string commandFile) {
 void Store::commander(char ctype, int custID, std::string commandLine){
     switch(ctype){
         case 'B':
-            borrowMovie(commandLine);
+            borrowMovie(commandLine, ctype, custID);
             break;
         case 'R':
-            returnMovie(commandLine);
+            returnMovie(commandLine, ctype, custID);
             break;
         case 'I':
             printInventory();
@@ -144,17 +144,23 @@ void Store::printInventory() const{ //TODO SORT THEMMMM
 
 
 }
+
 //------------------------------------------------------------------------------
 //  borrowMovie() - method for borrowing a movie-- adds to cust history
 //------------------------------------------------------------------------------
-bool Store::borrowMovie(std::string moveLine){
+bool Store::borrowMovie(std::string movieLine, char ctype, int custID){
+    //add the action to the customer's history history
+    Customer *actionCustomer = customerList.getItem(custID);
+    actionCustomer->addAction(movieLine);
+
     //find the movie in the movieList.... subtract stock
+    movieList.removeStock(movieLine, ctype);
 
 }
 //------------------------------------------------------------------------------
 //  returnMovie() - method for returning a movie -- adds to cust history
 //------------------------------------------------------------------------------
-bool Store::returnMovie(std::string movieLine){
+bool Store::returnMovie(std::string movieLine, char ctype, int custID){
 
 }
 //------------------------------------------------------------------------------
@@ -172,19 +178,5 @@ bool Store::printCustHistory(std::string commandLine){
     histForCust->printHistory();
 
 }
->>>>>>> Stashed changes
-//------------------------sortMovieVector--------------------------------------
-//void Store::sortMovieVector(vector<Movie *>, char mType){
-        //the movie vector is passed in (Drama, Classical, Comedy)
-        // along with the Movie type character ('D', 'C', 'F')
 
-        //switch(mType){
-        //  case 'D':
-        //sort movies by Director, then Title
-        //  case 'F':
-        //sort movies by Title, then year it was released
-        //  case 'C':
-        //sort movies by Release Date, then Major Actor
-        //}
-//}
 

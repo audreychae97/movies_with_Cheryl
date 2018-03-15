@@ -14,6 +14,7 @@ Movie::Movie() {
     director = "";
     genre = '\0';
     year = 0;
+    stock = 0;
 }
 Movie::Movie(std::string descr){
     std::string sTitle;
@@ -69,4 +70,6 @@ void Movie::print() const{
     std::cout << genre << ", " << stock << ", " << title << ", ";
     std::cout << director << ", " << title << ", " << year << std::endl;
 }
-
+void Movie::setStock(int stock) {
+    this->stock = stock;
+}

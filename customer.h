@@ -31,7 +31,7 @@ class Customer {
         std::string getFirstName();		// returns firstName
         std::string getLastName();		// returns lastName
         void printHistory() const;
-
+        void addAction(std::string actionLine);
 };
 #endif
 
