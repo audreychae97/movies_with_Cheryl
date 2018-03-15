@@ -14,6 +14,7 @@ Drama::Drama(){
 //----------------------Operator ==--------------------------------------------
 // Equality operator; tests whether this drama class has the same data as other
 bool Drama::operator ==(const Movie& other) const{
+    if (this == &other) return true;
     return title == other.getTitle() && director == other.getDirector() &&
 	    genre == other.getGenre() && year == other.getYear();
 }
@@ -22,6 +23,9 @@ bool Drama::operator ==(const Movie& other) const{
 // Greater than operator; tests whether this drama object is greater than
 // other (based on director, then title)
 bool Drama::operator >(const Movie& other) const{
+    return !(*this < other);
+
+
     if (director != other.getDirector()) {
         return director > other.getDirector();
     } else if (title != other.getTitle()) {
@@ -35,8 +39,16 @@ bool Drama::operator >(const Movie& other) const{
 // Less than operator; tests whether this drama class is less than other;
 // based on director,then title
 bool Drama::operator <(const Movie& other) const{
-    return !(*this > other);
-}
-void Drama::print(){
-
+    if (director < other.getDirector()) {
+        return true;
+    } else if (director > other.getDirector()) {
+	    return false;
+    } else {
+        if (title < other.getTitle()) {
+	    return true;
+	} else if (title > other.getTitle()) {
+            return false;
+	}
+	return false;
+    }
 }

@@ -85,14 +85,15 @@ void Classic::setMonth(int month){
 //--------------------Operator ==----------------------------------------------
 // Equality operator; checks whether this object has the same data as other;
 // based on release date, then major actor
-/*bool Classic::operator ==(Movie& other) const {
-    if (genre == other.getGenre()) {
-	Classic& newClassic = dynamic_cast<Classic&>(other);
-	    actorLastName == newClassic.getLastName() &&
-	    month == newClassic.getMonth();
-    }
-    return false;
-}*/
+bool Classic::operator ==(const Movie& other) const {
+    const Classic& newMovie = dynamic_cast<const Classic&>(other);
+    
+    if (this == &newMovie) return true;
+
+    return director == newMovie.getDirector() &&
+	   title == newMovie.getTitle() &&
+	   year == newMovie.getYear() && month == newMovie.getMonth();
+}
 
 //--------------------Operator >-----------------------------------------------
 // Greater than operator; tests whether this object is greater than other; 

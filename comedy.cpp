@@ -19,7 +19,8 @@ Comedy::Comedy(){
 //-----------------------Operator ==-------------------------------------------
 // Checks whether this movie has the same data as otherMovie
 bool Comedy::operator ==(const Movie& otherMovie) const {
-   return  title == otherMovie.getTitle() && 
+    if (this == &otherMovie) return true;
+    return  title == otherMovie.getTitle() && 
 	   director == otherMovie.getDirector() &&
 	   genre == otherMovie.getGenre() && year == otherMovie.getYear();
 }
@@ -28,13 +29,18 @@ bool Comedy::operator ==(const Movie& otherMovie) const {
 // Tests whether this object is greater than the otherMovie; based on title,
 // then year it was released
 bool Comedy::operator >(const Movie& otherMovie) const {
-    if (title != otherMovie.getTitle()) {
-        return title > otherMovie.getTitle();
-    } else if (year != otherMovie.getYear()) {
-        return year > otherMovie.getYear();
-    } else {
+    if (title < otherMovie.getTitle()) {
+	return true;
+    } else if (title > otherMovie.getTitle()) {
         return false;
+    } else {
+	if (year < otherMovie.getYear()) {
+            return true;
+        } else if (year > otherMovie.getYear()) {
+            return false;
+	}
     }
+    return false;
 }
 
 //-----------------------Operator <--------------------------------------------
@@ -43,6 +49,4 @@ bool Comedy::operator >(const Movie& otherMovie) const {
 bool Comedy::operator <(const Movie& otherMovie) const {
     return !(*this > otherMovie);
 }
-void Comedy::print(){
 
-}
