@@ -41,10 +41,10 @@ public:
         virtual void print() const;			// prints out its data
 
 	// Methods
-	//virtual void print() = 0; //pure virtual .. different for at least 1 so make it lie that
-//	virtual bool operator ==(const Movie& movieThing) const = 0;
-//	virtual bool operator <(const Movie& movieThing) const = 0;
-//	virtual bool operator >(const Movie& movieThing) const = 0;
+	//virtual void print() = 0; //pure virtual .. different for at least 1 so make it like that
+	//virtual bool operator ==(const Movie& movieThing) const = 0;
+	virtual bool operator <(const Movie& movieThing) const = 0;
+	virtual bool operator >(const Movie& movieThing) const = 0;
 
 };
 

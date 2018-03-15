@@ -61,7 +61,6 @@ Classic::Classic(std::string descr) {
 
 //---------------------Destructor----------------------------------------------
 Classic::~Classic(){
-
 }
 
 //---------------------setFirstName--------------------------------------------
@@ -85,15 +84,15 @@ void Classic::setMonth(int month){
 //--------------------Operator ==----------------------------------------------
 // Equality operator; checks whether this object has the same data as other;
 // based on release date, then major actor
-bool Classic::operator ==(Movie& otherM) const {
-    if (genre == otherM.getGenre()) {
-	    Classic& other = dynamic_cast<Classic&>(otherM);
-	    return actorFirstName == other.getFirstName() &&
-		actorLastName == other.getLastName() &&
-		month == other.getMonth();
+/*bool Classic::operator ==(Movie& other) const {
+    if (genre == other.getGenre()) {
+	Classic& newClassic = dynamic_cast<Classic&>(other);
+	return actorFirstName == newClassic.getFirstName() &&
+	    actorLastName == newClassic.getLastName() &&
+	    month == newClassic.getMonth();
     }
     return false;
-}
+}*/
 
 //--------------------Operator >-----------------------------------------------
 // Greater than operator; tests whether this object is greater than other; 

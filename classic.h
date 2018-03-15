@@ -37,10 +37,10 @@ class Classic: public Movie {
         int getMonth() const { return month; };			// gets month
 
         // Methods
-        bool operator ==(Movie& movieThing) const; // Equality operator
-        bool operator >(const Movie& movieThing) const ; // Greater than oper
-        bool operator <(const Movie& movieThing) const;	 // Less than operator
-        void print() const;				// Prints out its data
+        bool operator ==(const Movie& other) const;// Equality operator
+        bool operator >(const Movie& other) const; // Greater than oper
+        bool operator <(const Movie& other) const; // Less than operator
+        void print() const;		     	   // Prints out its data
 };
 #endif
 

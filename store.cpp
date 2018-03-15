@@ -97,9 +97,13 @@ void Store::readCommands(std::string commandFile) {
 
     }
 }
+
+//------------------------showMoviesByGenre------------------------------------
+// Prints the movie by given genre type
 void Store::showMoviesByGenre(char type){
     movieList.printByGenre(type);
 }
+
 //------------------------sortMovieVector--------------------------------------
 //void Store::sortMovieVector(vector<Movie *>, char mType){
         //the movie vector is passed in (Drama, Classical, Comedy)

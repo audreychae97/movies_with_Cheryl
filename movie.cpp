@@ -9,7 +9,6 @@
 #include <fstream>
 
 //-------------------------Default Constructor---------------------------------
-// TODO
 Movie::Movie() {
     title = "";
     director = "";
