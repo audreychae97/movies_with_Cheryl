@@ -41,7 +41,7 @@ public:
 	virtual void print() const;			// prints out its data
 
 	// Methods
-	//virtual bool operator ==(const Movie& movieThing) const = 0;
+	virtual bool operator ==(const Movie& movieThing) const = 0;
 	virtual bool operator <(const Movie& movieThing) const = 0;
 	virtual bool operator >(const Movie& movieThing) const = 0;
 
