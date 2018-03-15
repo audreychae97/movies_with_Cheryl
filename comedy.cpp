@@ -43,4 +43,6 @@ bool Comedy::operator >(const Movie& otherMovie) const {
 bool Comedy::operator <(const Movie& otherMovie) const {
     return !(*this > otherMovie);
 }
+void Comedy::print(){
 
+}

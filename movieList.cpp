@@ -64,12 +64,27 @@ bool MovieList::addMovie(std::string movieDescription){
 //-----------------------isDuplicate-------------------------------------------
 //checks to see if movie is duplicated
 bool MovieList::isDuplicate(std::string tempMovie, char mType) {
-    for(int i =0; i < movieList[mType].size(); i++){
-        if(movieList[mType].at(i)->getTitle() == tempMovie){
+    int index;
+    switch(mType){
+        case 'D':
+            index = DRAMA_INDEX;
+            break;
+        case 'F':
+            index = COMEDY_INDEX;
+            break;
+        case 'C':
+            index = CLASSIC_INDEX;
+            break;
+        default:
+            index = -1;
+            break;
+    }
+    for(int i=0; i < movieList[index].size(); i++){
+        if(movieList[index].at(i)->getTitle() == tempMovie){
             return true;
         }
-        else{
-            return false;
+        else{ //TODO Fix this
+            std::cout << "poop " << std::endl;
         }
     }
 }
