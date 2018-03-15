@@ -131,7 +131,7 @@ void Store::commander(char ctype, int custID, std::string commandLine){
             printInventory();
             break;
         case 'H':
-            printCustHistory(commandLine);
+            printCustHistory(custID);
             break;
         default:
             std::cout << "Invalid command found" << std::endl;
@@ -182,11 +182,7 @@ bool Store::returnMovie(std::string movieLine, char ctype, int custID){
 //------------------------------------------------------------------------------
 //  printInventory() - method that prints all items in the store
 //------------------------------------------------------------------------------
-bool Store::printCustHistory(std::string commandLine){
-    int custID;
-
-    std::istringstream ss(commandLine);
-    ss >> custID >> custID;
+bool Store::printCustHistory(int custID){
     std::cout <<"inside printCustHistory... CustID = " << custID << std::endl;
 
     Customer * histForCust = customerList.getItem(custID);

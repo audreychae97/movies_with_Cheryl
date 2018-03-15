@@ -78,6 +78,7 @@ std::string Customer::getLastName(){
 }
 //----------------------printHistory--------------------------------------------
 void Customer::printHistory() const {
+    std::cout << "inside printHistory for customer" << std::endl;
     for(size_t i = 0; i < actionHistory.size(); i++){
         std::cout << actionHistory.at(i) << std::endl;
     }
