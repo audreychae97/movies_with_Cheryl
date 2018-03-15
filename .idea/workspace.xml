@@ -15,7 +15,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/a.out" afterPath="$PROJECT_DIR$/a.out" />
       <change beforePath="$PROJECT_DIR$/a.out.dSYM/Contents/Resources/DWARF/a.out" afterPath="$PROJECT_DIR$/a.out.dSYM/Contents/Resources/DWARF/a.out" />
-      <change beforePath="$PROJECT_DIR$/customer.cpp" afterPath="$PROJECT_DIR$/customer.cpp" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
+      <change beforePath="$PROJECT_DIR$/movie.cpp" afterPath="$PROJECT_DIR$/movie.cpp" />
+      <change beforePath="$PROJECT_DIR$/movieList.cpp" afterPath="$PROJECT_DIR$/movieList.cpp" />
+      <change beforePath="$PROJECT_DIR$/movieList.h" afterPath="$PROJECT_DIR$/movieList.h" />
+      <change beforePath="$PROJECT_DIR$/store.cpp" afterPath="$PROJECT_DIR$/store.cpp" />
+      <change beforePath="$PROJECT_DIR$/store.h" afterPath="$PROJECT_DIR$/store.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,24 +32,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5853852">
+    <splitter split-orientation="horizontal" split-proportion="0.50436854">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="store.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/store.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="183">
-                  <caret line="158" column="0" lean-forward="true" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+                <state relative-caret-position="240">
+                  <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -53,10 +48,22 @@
           <file leaf-file-name="movieList.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/movieList.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-478">
-                  <caret line="75" column="17" lean-forward="true" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+                <state relative-caret-position="1116">
+                  <caret line="126" column="57" lean-forward="true" selection-start-line="126" selection-start-column="57" selection-end-line="126" selection-end-column="57" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="store.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/store.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-977">
+                  <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+                  <folding>
+                    <marker date="1521086624000" expanded="true" signature="2746:2862" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -65,28 +72,18 @@
           <file leaf-file-name="movie.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/movie.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="271">
-                  <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="27" selection-end-column="34" />
+                <state relative-caret-position="-425">
+                  <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="moviefactory.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/moviefactory.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="customer.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="customer.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/customer.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="548">
-                  <caret line="88" column="25" lean-forward="false" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+                <state relative-caret-position="1125">
+                  <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="37" />
                   <folding />
                 </state>
               </provider>
@@ -116,11 +113,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="store.h" pinned="false" current-in-tab="true">
+          <file leaf-file-name="store.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/store.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+                <state relative-caret-position="405">
+                  <caret line="33" column="54" lean-forward="false" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="movieList.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/movieList.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -150,6 +157,16 @@
       <find>load</find>
       <find>printCustHistory</find>
       <find>Adding action</find>
+      <find>remove</find>
+      <find>removesto</find>
+      <find>borrow</find>
+      <find>titleGet</find>
+      <find>movieChecker</find>
+      <find>inside pri</find>
+      <find>printHistory</find>
+      <find>comedy`</find>
+      <find>printByGenre</find>
+      <find>movie title</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -168,21 +185,21 @@
         <option value="$PROJECT_DIR$/moviefactory.h" />
         <option value="$PROJECT_DIR$/hashtable.h" />
         <option value="$PROJECT_DIR$/comedy.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/classic.cpp" />
         <option value="$PROJECT_DIR$/classic.h" />
-        <option value="$PROJECT_DIR$/movieList.h" />
         <option value="$PROJECT_DIR$/customer.h" />
         <option value="$PROJECT_DIR$/drama.h" />
-        <option value="$PROJECT_DIR$/movie.cpp" />
         <option value="$PROJECT_DIR$/movie.h" />
         <option value="$PROJECT_DIR$/drama.cpp" />
         <option value="$PROJECT_DIR$/comedy.cpp" />
         <option value="$PROJECT_DIR$/moviefactory.cpp" />
-        <option value="$PROJECT_DIR$/store.cpp" />
-        <option value="$PROJECT_DIR$/store.h" />
-        <option value="$PROJECT_DIR$/movieList.cpp" />
         <option value="$PROJECT_DIR$/customer.cpp" />
+        <option value="$PROJECT_DIR$/store.h" />
+        <option value="$PROJECT_DIR$/movieList.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/movie.cpp" />
+        <option value="$PROJECT_DIR$/movieList.cpp" />
+        <option value="$PROJECT_DIR$/store.cpp" />
       </list>
     </option>
   </component>
@@ -273,7 +290,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86720000" />
+    <option name="totallyTimeSpent" value="88806000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -425,7 +442,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1521086624000" expanded="true" signature="2746:2862" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -505,7 +524,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1521086624000" expanded="true" signature="2746:2862" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -563,7 +584,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding />
+          <folding>
+            <marker date="1521086624000" expanded="true" signature="2746:2862" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -615,14 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="193" column="62" lean-forward="true" selection-start-line="193" selection-start-column="62" selection-end-line="193" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/movieList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -703,44 +718,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movie.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="27" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="158" column="0" lean-forward="true" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/movieList.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-478">
-          <caret line="75" column="17" lean-forward="true" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/store.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        <state relative-caret-position="405">
+          <caret line="33" column="54" lean-forward="false" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -753,11 +734,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/customer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="88" column="25" lean-forward="false" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+        <state relative-caret-position="1125">
+          <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movieList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movieList.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="126" column="57" lean-forward="true" selection-start-line="126" selection-start-column="57" selection-end-line="126" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movie.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-977">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <marker date="1521086624000" expanded="true" signature="2746:2862" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -31,7 +31,7 @@ public:
     bool printCustHistory(int custID); //H
     void commander(char type, int custID, std::string commandLine);
     bool genreChecker(char mType) const;
-
+    bool movieChecker(std::string moveTitle, char type);
     //every time a new movie is made..
     void showCustomers();
     void showMoviesByGenre(char type);

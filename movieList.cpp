@@ -30,12 +30,8 @@ bool MovieList::addMovie(std::string movieDescription){
 
     std::stringstream ss(movieDescription);
     ss >> mType;
-    std::getline(ss, mTitle, ',');
-    std::getline(ss, mTitle, ',');
-    std::getline(ss, mTitle, ',');
-    std::getline(ss, mTitle, ',');
+    titleGetter(movieDescription);
 
-    std::cout << "Movie title from inside movieList: " << mTitle;
     //TODO Check for classic movies too
 
     if(isDuplicate(mTitle, mType)){ //if movie exists, add it to the same
@@ -64,6 +60,8 @@ bool MovieList::addMovie(std::string movieDescription){
 }
 //-----------------------isDuplicate-------------------------------------------
 //checks to see if movie is duplicated
+//return true if existing
+//returns false if non existing
 bool MovieList::isDuplicate(std::string tempMovie, char mType) {
     int index;
     switch(mType){
@@ -84,6 +82,7 @@ bool MovieList::isDuplicate(std::string tempMovie, char mType) {
             return true;
         }
         else{ //TODO Fix this
+            return false;
         }
     }
 }
@@ -138,10 +137,16 @@ bool MovieList::removeStock(std::string movieTitle, char genreType){
     switch(genreType) {
         case 'D':
             rmStockHelper(movieTitle, DRAMA_INDEX);
+            return true;
         case 'C':
             rmStockHelper(movieTitle, CLASSIC_INDEX);
+            return true;
         case 'F':
             rmStockHelper(movieTitle, COMEDY_INDEX);
+            return true;
+        default:
+            std::cout << "** Removing a Stock of Unknown Genre **" << std::endl;
+            return false;
     }
 }
 //-----------------------rmStockHelper----------------------------------------
@@ -173,7 +178,17 @@ void MovieList::printByGenre(char type) const{
             break;
     }
 }
+//-----------------------titleGetter--------------------------------------------
+std::string MovieList::titleGetter(std::string movieLine){
+    std::string mTitle;
 
+    std::stringstream ss(movieLine);
+    std::getline(ss, mTitle, ',');
+    std::getline(ss, mTitle, ',');
+    std::getline(ss, mTitle, ',');
+    std::getline(ss, mTitle, ',');
+    return mTitle;
+}
 //-----------------------printer-----------------------------------------------
 // Given the index of movieList, this method will call the print method for 
 // each movie

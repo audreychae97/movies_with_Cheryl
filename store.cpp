@@ -73,12 +73,13 @@ void Store::loadMovieList(std::string movieDataFile){
                 movieList.addMovie(movieLine);
             }
             else{
-                std::cout << "That's an invalid genre type" << std::endl;
+                std::cout << "** That's An Invalid Genre Type **" << std::endl;
             }
         }
         inFile.close();
     }
 }
+//------------------------------------------------------------------------------
 bool Store::genreChecker(char mType) const {
     if(mType == 'C' || mType == 'D' || mType == 'F'){
         return true;
@@ -86,6 +87,9 @@ bool Store::genreChecker(char mType) const {
     else{
         return false;
     }
+}
+bool Store::movieChecker(std::string movieTitle, char type){
+    return (movieList.isDuplicate(movieTitle, type));
 }
 //------------------------------------------------------------------------------
         //while(getLine()){
@@ -102,6 +106,7 @@ void Store::readCommands(std::string commandFile) {
     std::string commandLine;
     char type = '\0';
     int custID;
+
     inFile.open(commandFile);
 
     if(!inFile){
@@ -134,7 +139,7 @@ void Store::commander(char ctype, int custID, std::string commandLine){
             printCustHistory(custID);
             break;
         default:
-            std::cout << "Invalid command found" << std::endl;
+            std::cout << "** Invalid Command Found **" << std::endl;
             break;
     }
 }
@@ -163,12 +168,20 @@ void Store::printInventory() const{ //TODO SORT THEMMMM
 //  borrowMovie() - method for borrowing a movie-- adds to cust history
 //------------------------------------------------------------------------------
 bool Store::borrowMovie(std::string movieLine, char ctype, int custID){
-    //add the action to the customer's history history
-    Customer *actionCustomer = customerList.getItem(custID);
-    actionCustomer->addAction(movieLine);
+    std::string mTitle = movieList.titleGetter(movieLine);
 
-    //find the movie in the movieList.... subtract stock
-    movieList.removeStock(movieLine, ctype);
+    //check to see if the movie even exists first
+    if(movieChecker(mTitle, ctype)){
+        //add the action to the customer's history history
+        Customer *actionCustomer = customerList.getItem(custID);
+        actionCustomer->addAction(movieLine);
+
+        //find the movie in the movieList.... subtract stock
+        movieList.removeStock(movieLine, ctype);
+    }
+    else{
+        std::cout << "That movie does not exist to borrow" << std::endl;
+    }
 
 }
 
@@ -176,15 +189,25 @@ bool Store::borrowMovie(std::string movieLine, char ctype, int custID){
 //  returnMovie() - method for returning a movie -- adds to cust history
 //------------------------------------------------------------------------------
 bool Store::returnMovie(std::string movieLine, char ctype, int custID){
+    std::string mTitle = movieList.titleGetter(movieLine);
+    //check to see if the movie even exists first
+    if(movieChecker(mTitle, ctype)){
+        //add the action to the customer's history history
+        Customer *actionCustomer = customerList.getItem(custID);
+        actionCustomer->addAction(movieLine);
 
+        //find the movie in the movieList.... subtract stock
+        movieList.addStock(movieLine, ctype);
+    }
+    else{
+        std::cout << "** That Movie Does Not Exist to Borrow **" << std::endl;
+    }
 }
 
 //------------------------------------------------------------------------------
 //  printInventory() - method that prints all items in the store
 //------------------------------------------------------------------------------
 bool Store::printCustHistory(int custID){
-    std::cout <<"inside printCustHistory... CustID = " << custID << std::endl;
-
     Customer * histForCust = customerList.getItem(custID);
 
     histForCust->printHistory();
