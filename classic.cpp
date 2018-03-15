@@ -99,14 +99,35 @@ bool Classic::operator ==(const Movie& other) const {
 // Greater than operator; tests whether this object is greater than other; 
 // based on release date, then major actor
 bool Classic::operator >(const Movie& other) const{
-
+    return !(*this < other);
 }
 
 //--------------------Operator <----------------------------------------------
 // Less than operator; tests whether this object is less than other; based on
 // release date, then major actor
 bool Classic::operator <(const Movie& other) const{
-    return !(*this > other);
+    const Classic& newOther = dynamic_cast<const Classic&>(other);
+
+    if (year > newOther.getYear()) {
+	return true;
+    } else if (year > newOther.getYear()) {
+	return false;
+    } else {
+	if (month < newOther.getMonth()) {
+	    return true;
+	} else if (month > newOther.getMonth()) {
+            return false;
+	} else {
+		if (actorFirstName < newOther.getFirstName() &&
+			actorLastName < newOther.getLastName()) {
+		    return true;
+		} else if (actorFirstName > newOther.getFirstName() &&
+			actorLastName > newOther.getLastName()) {
+		    return false;
+		}
+	}
+    }
+    return false;
 }
 
 //--------------------print----------------------------------------------------
