@@ -7,6 +7,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <string>
 
 //-----------------------------------------------------------------------------
 // The Customer class contains customer information/actionHistory of a customer
@@ -75,7 +76,17 @@ std::string Customer::getFirstName() {
 std::string Customer::getLastName(){
     return lastName;
 }
+//----------------------printHistory--------------------------------------------
 void Customer::printHistory() const {
+    for(size_t i = 0; i < actionHistory.size(); i++){
+        std::cout << actionHistory.at(i) << std::endl;
+    }
+}
+//----------------------addAction--------------------------------------------
+void Customer::addAction(std::string actionLine){
+    actionLine.erase (actionLine.begin()+1);
+    std::cout << "Adding action: " << actionLine << '\n';
+    actionHistory.push_back(actionLine);
 
 }
 

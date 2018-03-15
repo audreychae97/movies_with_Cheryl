@@ -16,13 +16,14 @@ private:
 
     void addStockHelper(std::string, int); // Helps addStock, takes title,type
     void addMovieHelper(int, const Movie*);      // Helps addMovie
+    void rmStockHelper(std::string, int);
 
 public:
     MovieList();					// Default Constructor
     ~MovieList();					// Destructor
     bool addMovie(std::string movieDescription);	// Adds movie to list
     bool addStock(std::string movieTitle, char genreType); // +1 to movie stock
-    bool removeStock();					// -1 to movie stock
+    bool removeStock(std::string movieTitle, char genreType);// -1 to movie stock
     void printByGenre(char type) const;	// Prints all movies from genre
     void printer(int index) const;	// Helper method to printByGenre
     bool isDuplicate(std::string tempMovie, char mType);

@@ -40,7 +40,7 @@ bool MovieList::addMovie(std::string movieDescription){
     else if(isDuplicate(mTitle, mType) && (mType == 'C')){
         //create a new one for classic if the actors are different
     }
-    else{   //proceed as normal
+    else{   //proceed with creating new movie
         Movie* newMovie = mFactory.makeMovie(mType, movieDescription);
         //push to vector at correct genre bucket
         switch(mType){
@@ -123,10 +123,28 @@ void MovieList::addStockHelper(std::string movieTitle, int genre) {
 }
 
 //-----------------------removeStock-------------------------------------------
-bool MovieList::removeStock(){
-
+bool MovieList::removeStock(std::string movieTitle, char genreType){
+    switch(genreType) {
+        case 'D':
+            rmStockHelper(movieTitle, DRAMA_INDEX);
+        case 'C':
+            rmStockHelper(movieTitle, CLASSIC_INDEX);
+        case 'F':
+            rmStockHelper(movieTitle, COMEDY_INDEX);
+    }
 }
-
+//-----------------------rmStockHelper----------------------------------------
+// Helper method for rmStock; finds movie within movieList and decreases
+// stock by 1
+void MovieList::rmStockHelper(std::string movieTitle, int genre) {
+    int currStock = 0;
+    for(size_t i =0; i < movieList[genre].size(); i++){
+        if(movieList[genre].at(i)->getTitle() == movieTitle){
+            currStock = movieList[genre].at(i)->getStock();
+            movieList[genre].at(i)->setStock(currStock-1);
+        }
+    }
+}
 //-----------------------printByGenre------------------------------------------
 void MovieList::printByGenre(char type) const{
     switch(type){
