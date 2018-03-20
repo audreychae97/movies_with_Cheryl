@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /Users/audreychae/Desktop/PRJ_4
+=======
+# Install script for directory: /Users/audreychae/Desktop/movies_with_Cheryl
+>>>>>>> DEV
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +39,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/Users/audreychae/Desktop/PRJ_4/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> DEV
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

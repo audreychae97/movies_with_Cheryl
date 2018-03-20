@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 #include<string>
 using namespace std;
 #include "movie.h";
 
 #ifndef MOVIEFACTORY_H_
 #define MOVIEFACTORY_H_
+=======
+#ifndef MOVIEFACTORY_H
+#define MOVIEFACTORY_H
+
+#include "movie.h"
+#include "classic.h"
+#include "drama.h"
+#include "comedy.h"
+>>>>>>> DEV
 
 //---------------------------------------------------------------------------
 //Class MovieFactory. Creates an object of Movie type and
@@ -13,6 +23,7 @@ class MovieFactory {
 
 public:
     MovieFactory();
+<<<<<<< HEAD
     ~MovieFactory();
 
     static Movie* createMovie(string type);
@@ -35,3 +46,10 @@ public:
 
 
 #endif /* MOVIEFACTORY_H_ */
+=======
+    //virtual ~MovieFactory();
+    static Movie* makeMovie(char type, std::string descr);
+};
+
+#endif
+>>>>>>> DEV

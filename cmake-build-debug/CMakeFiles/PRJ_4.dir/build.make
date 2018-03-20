@@ -43,10 +43,17 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /Users/audreychae/Desktop/PRJ_4
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/audreychae/Desktop/PRJ_4/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = /Users/audreychae/Desktop/movies_with_Cheryl
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug
+>>>>>>> DEV
 
 # Include any dependencies generated for this target.
 include CMakeFiles/PRJ_4.dir/depend.make
@@ -57,6 +64,7 @@ include CMakeFiles/PRJ_4.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/PRJ_4.dir/flags.make
 
+<<<<<<< HEAD
 CMakeFiles/PRJ_4.dir/main.cpp.o: CMakeFiles/PRJ_4.dir/flags.make
 CMakeFiles/PRJ_4.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PRJ_4.dir/main.cpp.o"
@@ -127,6 +135,9 @@ CMakeFiles/PRJ_4.dir/build: PRJ_4
 
 CMakeFiles/PRJ_4.dir/requires: CMakeFiles/PRJ_4.dir/main.cpp.o.requires
 CMakeFiles/PRJ_4.dir/requires: CMakeFiles/PRJ_4.dir/store.cpp.o.requires
+=======
+CMakeFiles/PRJ_4.dir/requires:
+>>>>>>> DEV
 
 .PHONY : CMakeFiles/PRJ_4.dir/requires
 
@@ -135,6 +146,10 @@ CMakeFiles/PRJ_4.dir/clean:
 .PHONY : CMakeFiles/PRJ_4.dir/clean
 
 CMakeFiles/PRJ_4.dir/depend:
+<<<<<<< HEAD
 	cd /Users/audreychae/Desktop/PRJ_4/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/audreychae/Desktop/PRJ_4 /Users/audreychae/Desktop/PRJ_4 /Users/audreychae/Desktop/PRJ_4/cmake-build-debug /Users/audreychae/Desktop/PRJ_4/cmake-build-debug /Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles/PRJ_4.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/audreychae/Desktop/movies_with_Cheryl /Users/audreychae/Desktop/movies_with_Cheryl /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles/PRJ_4.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> DEV
 .PHONY : CMakeFiles/PRJ_4.dir/depend
 

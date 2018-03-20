@@ -54,10 +54,17 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /Users/audreychae/Desktop/PRJ_4
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/audreychae/Desktop/PRJ_4/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = /Users/audreychae/Desktop/movies_with_Cheryl
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug
+>>>>>>> DEV
 
 #=============================================================================
 # Target rules for target CMakeFiles/PRJ_4.dir
@@ -66,7 +73,11 @@ CMAKE_BINARY_DIR = /Users/audreychae/Desktop/PRJ_4/cmake-build-debug
 CMakeFiles/PRJ_4.dir/all:
 	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/depend
 	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target PRJ_4"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles --progress-num= "Built target PRJ_4"
+>>>>>>> DEV
 .PHONY : CMakeFiles/PRJ_4.dir/all
 
 # Include target in all.
@@ -76,9 +87,15 @@ all: CMakeFiles/PRJ_4.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PRJ_4.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/PRJ_4.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/PRJ_4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles 0
+>>>>>>> DEV
 .PHONY : CMakeFiles/PRJ_4.dir/rule
 
 # Convenience name for target.

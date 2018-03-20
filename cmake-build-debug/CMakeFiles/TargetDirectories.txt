@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 /Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles/PRJ_4.dir
+=======
+/Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles/PRJ_4.dir
+>>>>>>> DEV

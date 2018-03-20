@@ -48,10 +48,17 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /Users/audreychae/Desktop/PRJ_4
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/audreychae/Desktop/PRJ_4/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = /Users/audreychae/Desktop/movies_with_Cheryl
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug
+>>>>>>> DEV
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +87,15 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles /Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/audreychae/Desktop/PRJ_4/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/audreychae/Desktop/movies_with_Cheryl/cmake-build-debug/CMakeFiles 0
+>>>>>>> DEV
 .PHONY : all
 
 # The main clean target
@@ -123,6 +136,7 @@ PRJ_4/fast:
 	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/build
 .PHONY : PRJ_4/fast
 
+<<<<<<< HEAD
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -177,6 +191,8 @@ store.cpp.s:
 	$(MAKE) -f CMakeFiles/PRJ_4.dir/build.make CMakeFiles/PRJ_4.dir/store.cpp.s
 .PHONY : store.cpp.s
 
+=======
+>>>>>>> DEV
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +202,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... PRJ_4"
+<<<<<<< HEAD
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... store.o"
 	@echo "... store.i"
 	@echo "... store.s"
+=======
+>>>>>>> DEV
 .PHONY : help
 
 
